@@ -91,13 +91,14 @@ header nav {
     /* Con margin-left intento tirar lo más a la derecha posible el nav*/
     /* margin-left: 7%;*/
     /* Intento lo mismo con el uso de position pero no me termina de convencer*/
-    position: relative;
+    /*position: relative;*/
+    display: inline-block;
     right: -5%;
     font-size: 40px;
 }
 
 header nav ul li {
-    display: inline-block;
+    
     text-align: right;
 }
 
@@ -217,6 +218,15 @@ me rompia la estructura que buscaba con el uso de los checkbox*/
     width: 100%;
 }
 
+.navItem {
+    background-color: #105652;
+    border: solid 2px #FF4C29;
+    padding: 3px;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
 /*
 Esta clase se creó para agregar un "botón" siempre visible que permita subir al 
 inicio de la página sin tener que scrollear hacía arriba.
@@ -279,6 +289,18 @@ inicio de la página sin tener que scrollear hacía arriba.
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*FLEXBOX*/
+
+.flex {
+    display:flex;
+    justify-content: space-between;
+}
+
+.flexHashtags {
+    display: flex;    
+    justify-content: space-between;
 }
 
 /*
