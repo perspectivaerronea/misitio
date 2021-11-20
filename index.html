@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Uso de Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/vbt0cvs.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Perspectiva Errónea</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- El logo funciona como link al index -->
+        <h1 class="enLinea" id="Top"><a href="index.html">Perspectiva Errónea</a></h1>
+        <nav class="enLinea">
+            <ul class="enLinea">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#Podcast">Podcast</a></li>
+                <li><a href="./pages/perspectivas.html">Perspectivas</a></li>
+                <li><a href="./pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva Errónea?</a></li>
+                <li><a href="./pages/Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Esta primer sección va a funcionar como acceso directo a lo más nuevo que se haya publicado, sea un video de YT, o un episodio del Podcast, o un posteo -->
+        <article>
+            <hr>
+            <h2>La Novedad</h2>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fUWDGacLwiY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </article>
+    </main>
+    <!-- 
+            - La idea es crear una galería. Aún no sé si con los posteos de Instagram o como galeria de las piezas que vendo como NFT 
+            - Con los botones de los costados querría poder moverme a través de la galeria, o con las flechas del teclado, pero no sé como hacer eso. 
+        -->
+    <section id="galeria">
+        <article>
+            <hr>
+            <h2>Galería NFT</h2>
+            <ul class="enLinea">
+                <li>
+                    <a href="https://www.hicetnunc.xyz/objkt/333688"><img src="./images/nft/lurking darkness.jpg"
+                            alt="Una mano gigante se asoma desde la oscuridad asechando a unx transeunte"></a>
+                </li>
+                <li>
+                    <a href="https://www.hicetnunc.xyz/objkt/264980"><img src="./images/nft/wondernigth.jpg"
+                            alt="Navegando en un oceano de nubes oniricas"></a>
+                </li>
+                <li>
+                    <a href="https://www.hicetnunc.xyz/objkt/253691"><img src="./images/nft/leap of faith.jpg"
+                            alt="Un salto al vacio del espacio"></a>
+                </li>
+                <li>
+                    <a href="https://www.hicetnunc.xyz/objkt/235126"><img src="./images/nft/foundyou.jpg"
+                            alt="Un ojo reptiliano mirando fijamente a una persona"></a>
+                </li>
+                <li>
+                    <a href="https://www.hicetnunc.xyz/objkt/228634"><img src="./images/nft/expected encounter.jpg"
+                            alt="Una mujer cara a cara con una serpiente gigante"></a>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <section id="Podcast">
+        <hr>
+        <h2>Podcast</h2>
+        <p>No hace falta más que darle play para comenzar a escuchar los episodios del podcast. Está, como quien dice,
+            servido en bandeja.</p>
+        <iframe src="https://open.spotify.com/embed/playlist/38eHjsPhKW5w7OKEJMdubm?utm_source=generator&amp;theme=0"
+            width="50%" height="380" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </section>
+    <section id="newsletter">
+        <article>
+            <p>Anotate para recibir el newsletter con todas las novedades y borrar el FOMO de la ecuación.</p>
+            <form action="./index.html" method="post" class="newsletter">
+                <input type="email" name="" id="" placeholder="correo electronico">
+                <input type="submit" value="Suscribirse">
+            </form>
+        </article>
+    </section>
+    <div class="contenedorArriba">
+        <p><a id="Arriba" href="#Top"><img src="./images/misc/home.png" alt="Volver al principio de la página"></a></p>
+    </div>
+    <footer>
+        <!--
+            En los links a redes estaba usando el atributo   pero lo saqué porque en la clase de consultas mencionaron que generaba un potencial problema en la seguridad
+        -->
+        <hr>
+        <section id="correoContacto" class="enLinea">
+            <h5>Contacto</h5>
+            <a href="#"><img src="./images/social/mail.png" alt="correo electronico" id="logoCorreo"></a>
+            <a href="#">info@perspectivaerronea.com</a>
+        </section>
+        <section id="redes" class="enLinea">
+            <h5>Nuestras Redes</h5>
+            <a href="https://www.youtube.com/channel/UCFo_0IP6qDqzvoY8tlY7BqQ?sub_confirmation=1">
+                <img src="./images/social/youtube.png" alt="Sucribite al Canal de Youtube"></a>
+            <a href="https://open.spotify.com/show/72ZcZ0Csbau1TWOndLZYbx?si=e11cacf5ccb442b0"><img
+                    src="./images/social/spotify.png" alt="Seguí el podcast en Spotify"></a>
+            <a href="https://soundcloud.com/perspectivaerronea/tracks"><img src="./images/social/soundcloud.png"
+                    alt="Seguime en soundcloud"></a>
+            <a href="https://www.instagram.com/perspectivaerronea/"><img src="./images/social/instagram.png"
+                    alt="Seguime en Instagram"></a>
+            <a href="https://twitter.com/persperronea"><img src="./images/social/twitter.png"
+                    alt="Seguime en Twitter"></a>
+            <!--
+                Esto lo dejé para recordar consultar el tema de los iconos y el copyrigth
+            <div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                    href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+            -->
+        </section>
+        <h6>2021 | Todos los derechos reservados | Persectiva Errónea | Nicolás Padin</h6>
+    </footer>
+</body>
+
+</html>

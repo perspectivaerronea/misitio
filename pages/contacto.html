@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/vbt0cvs.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Perspectiva Errónea</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- El logo funciona como link al index -->
+        <h1 class="enLinea" id="Top"><a href="../index.html">Perspectiva Errónea</a></h1>
+        <nav class="enLinea">
+            <ul class="enLinea">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#Podcast">Podcast</a></li>
+                <li><a href="../pages/perspectivas.html">Perspectivas</a></li>
+                <li><a href="../pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva Errónea?</a></li>
+                <li><a href="../pages/Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="contacto">¡Mandanos tu mensaje!</h2>
+        <form action="../pages/Contacto.html" method="post" id="formularioContacto" class="enLinea formularioContacto">
+            <fieldset>
+                <legend>Formulario de Contacto</legend>
+                <label for="nombre"> Nombre: </label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" class="anchoTotal">
+                <label for="email"> e-mail: </label>
+                <input type="email" name="email" id="email" placeholder="Ingrese su mail" class="anchoTotal" required>
+                <label for="mensaje"> Mensaje: </label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese su mensaje"
+                    class="anchoTotal"></textarea>
+                <label for="newsletter"> ¿Quéres sumarte al newsletter? </label>
+                <input type="checkbox" name="newsletter" id="newsletterContacto" value="1" checked="si">
+                <label for="noRobot"> No soy un robot </label>
+                <input type="checkbox" name="noRobot" id="noRobot">
+
+                <input type="submit" value="Enviar Formulario" class="anchoTotal">
+            </fieldset>
+        </form>
+    </main>
+    <div class="contenedorArriba">
+        <p><a id="Arriba" href="#Top"><img src="../images/misc/home.png" alt="Volver al principio de la página"></a></p>
+    </div>
+    <footer>
+        <hr>
+        <section id="correoContacto" class="enLinea">
+            <h5>Contacto</h5>
+            <a href="#"><img src="../images/social/mail.png" alt="correo electronico" id="logoCorreo"></a>
+            <a href="#">info@perspectivaerronea.com</a>
+        </section>
+        <section id="redes" class="enLinea">
+            <h5>Nuestras Redes</h5>
+            <a href="https://www.youtube.com/channel/UCFo_0IP6qDqzvoY8tlY7BqQ?sub_confirmation=1"><img
+                    src="../images/social/youtube.png" alt="Sucribite al Canal de Youtube"></a>
+            <a href="https://open.spotify.com/show/72ZcZ0Csbau1TWOndLZYbx?si=e11cacf5ccb442b0"><img
+                    src="../images/social/spotify.png" alt="Seguí el podcast en Spotify"></a>
+            <a href="https://soundcloud.com/perspectivaerronea/tracks"><img src="../images/social/soundcloud.png"
+                    alt="Seguime en soundcloud"></a>
+            <a href="https://www.instagram.com/perspectivaerronea/"><img src="../images/social/instagram.png"
+                    alt="Seguime en Instagram"></a>
+            <a href="https://twitter.com/persperronea"><img src="../images/social/twitter.png"
+                    alt="Seguime en Twitter"></a>
+            <!--
+                Esto lo dejé para recordar consultar el tema de los iconos y el copyrigth
+            <div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                    href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+            -->
+        </section>
+        <h6>2021 | Todos los derechos reservados | Persectiva Errónea | Nicolás Padin</h6>
+    </footer>
+</body>
+
+</html>

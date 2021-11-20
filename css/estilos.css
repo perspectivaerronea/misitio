@@ -1,0 +1,312 @@
+/*
+
+PALETA DE COLORES
+
+#082032
+rgb(8, 32, 50)
+
+#2C394B
+rgb(44, 57, 75)
+
+#334756
+rgb(51, 71, 86)
+
+#FF4C29
+rgb(255, 76, 41)
+
+Paleta B
+
+Fondo: FF9B6A
+
+
+
+Font Family
+
+Korolev Light Italic
+font-family: korolev, sans-serif;
+font-weight: 300;
+font-style: italic;
+
+Korolev Bold
+font-family: korolev, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+Korolev Heavy
+font-family: korolev, sans-serif;
+font-weight: 900;
+font-style: normal;
+
+Korolev Heavy Italic
+font-family: korolev, sans-serif;
+font-weight: 900;
+font-style: italic;
+
+Korolev Light
+font-family: korolev, sans-serif;
+font-weight: 300;
+font-style: normal;
+
+Korolev Bold Italic
+font-family: korolev, sans-serif;
+font-weight: 700;
+font-style: italic;
+
+Korolev Military Stencil Regular
+font-family: korolev-military-stencil, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Korolev Condensed Bold
+font-family: korolev-condensed, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+Korolev Condensed Light
+font-family: korolev-condensed, sans-serif;
+font-weight: 300;
+font-style: normal;
+*/
+
+/*
+*{
+    margin: 0;
+    padding: 0;
+}
+*/
+
+/*
+GRANDES CONTENEDORES Y SUS HIJOS
+*/
+body {
+    margin: 0px;
+    padding-left: 4px;
+    background-color: rgb(224, 224, 224);
+    font-family: 'Korolev', sans-serif, monospace;
+    font-size: 25px;
+    color: #105652;
+}
+
+header nav {
+    /* Con margin-left intento tirar lo más a la derecha posible el nav*/
+    /* margin-left: 7%;*/
+    /* Intento lo mismo con el uso de position pero no me termina de convencer*/
+    position: relative;
+    right: -5%;
+    font-size: 40px;
+}
+
+header nav ul li {
+    display: inline-block;
+    text-align: right;
+}
+
+/* Con esto quería poner en práctica el tema de crear una suerte de botón
+   para el link*/
+header nav ul li a {
+    background-color: #105652;
+    border: solid 2px #FF4C29;
+    padding: 3px;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+}
+
+/*
+ELEMENTOS ESPECÍFICOS
+*/
+
+h1 {
+
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+/*  
+En un principio tenía esto para sacar el simbolo de la lista
+pero luego probando descubrí que al cambiar el display del elemento
+este pierde el display del simbolo. De todas formas por cuestiones de 
+"por si acaso algún navegador no lo toma" lo dejo. 
+*/
+ul {
+    list-style-type: none;
+}
+
+/*Cambiar esto hizo que los elemntos dejen de tener el punto caracteristico
+del item de lista*/
+li {
+    display: inline-block;
+}
+
+/* le quito la decoración a los enlaces*/
+a {
+    text-decoration: none;
+    color: #105652;
+    margin: 0;
+}
+
+/* Esto lo agregué para que los parrafos sean de lectua más facil
+y además en el caso de la página "perspectiva.html" me da el espacio
+para agregar el acceso rápido a los posteos.*/
+p {
+    width: 80%;
+}
+
+
+/* En index.html este es el css que centra el video en la página*/
+iframe {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+/* Esto es para generar distancia entre los inputs del form y evitar usar el BR*/
+form input {
+    margin-bottom: 0.5%;
+}
+
+hr {
+    height: 4px;
+    border-width: 0;
+    background-color: #105652
+}
+
+/*
+CLASES
+*/
+.enLinea {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Cambiando el tipo de display de los label logro hacer que 
+el "no soy un robot" pase a la línea de abajo en lugar de quedar
+pegado al checkbox del newsletter.*/
+.formularioContacto label {
+    display: inline-block;
+}
+
+/* Esta clase se agregó para escribicar que elementos del formulario
+quiero que ocpen todo el ancho. Si lo aplicaba directamente al input
+me rompia la estructura que buscaba con el uso de los checkbox*/
+.anchoTotal {
+    width: 100%;
+}
+
+/*
+Esta clase se creó para agregar un "botón" siempre visible que permita subir al 
+inicio de la página sin tener que scrollear hacía arriba.
+*/
+.contenedorArriba {
+    position: fixed;
+    bottom: 1%;
+    right: 20px;
+}
+
+.contenedorArriba img {
+    width: 70px;
+    height: 70px;
+}
+
+/* Se me ocurrió hacer una guía de acceso rápido a los postos para no tener que 
+  hacer scroll por toda la página*/
+.posteos {
+    position: fixed;
+    top: 40%;
+    right: 1px;
+    width: 18%;
+    /* Si no agregaba la siguiente línea el circulo del item quedaba
+       por fuera de la caja. No sé porqué pasó eso. */
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 1%;
+    border: solid 2px #105652;
+    background-color: rgb(224, 224, 224);
+    ;
+    z-index: 10;
+}
+
+.posteos h6 {
+    margin: 2% auto;
+    text-align: center;
+}
+
+.posteos ul {
+    padding: 5px;
+}
+
+.posteos ul li {
+    display: list-item;
+    list-style-type: circle;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 2% auto;
+}
+
+/*
+ID
+*/
+
+/* Esto se ocupa de mover hacía la derecha toda la sección de "Nuestras Redes"*/
+#redes {
+    margin-left: 55%;
+}
+
+/* 
+    este id es para que el texto del correo esté alineado al medio 
+    respecto del icono con el sobre
+*/
+#logoCorreo {
+    vertical-align: middle;
+}
+
+#contacto {
+    text-align: center;
+}
+
+#formularioContacto {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+}
+
+#newsletter {
+    padding: 15px;
+    border: solid 2px black;
+    background-color: #105652;
+    color: white;
+    text-align: center;
+}
+
+#newsletter p {
+    width: 100%;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+}
