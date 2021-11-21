@@ -1,13 +1,225 @@
+/*
+ETIQUETAS HTML
+*/
+
+body {
+    margin: 0px;
+    padding-left: 4px;
+    background-color: rgb(224, 224, 224);
+    font-family: 'Korolev', sans-serif, monospace;
+    font-size: 20px;
+    color: #105652;
+}
+
+main,
+section {
+    width: 70%;
+    margin: 0 auto;
+}
+
+footer section {
+    width: 100%;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #105652;
+    margin: 0;
+    padding: 5px;
+}
+
+h2 {
+    margin: 0 auto;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+hr {
+    height: 4px;
+    border-width: 0;
+    background-color: #105652
+}
+
+form input {
+    margin-bottom: 0.5%;
+}
 
 /*
 CLASES
 */
 
+.contenedorArriba {
+    position: fixed;
+    bottom: 0%;
+    right: 50%;
+    margin: 0 auto;
+}
+
+.contenedorArriba img {
+    width: 70px;
+    height: 70px;
+}
+
+.contenedorArriba a {
+    width: auto;
+    height: auto;
+}
+
+.posteos {
+    position: fixed;
+    top: 38%;
+    right: 1px;
+    width: 18%;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 1%;
+    border: solid 2px #105652;
+    background-color: rgb(224, 224, 224);
+    z-index: 10;
+}
+
+.posteos h6 {
+    margin: 2% auto;
+    text-align: center;
+}
+
+.posteos ul {
+    padding: 5px;
+}
+
+.posteos ul li {
+    display: list-item;
+    list-style-type: circle;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 2% auto;
+}
+
+.posteosPerspectiva {
+    margin-right: 25%;
+}
+
+.posteosPerspectiva article img {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.flex a {
+    margin-top: 20px;
+}
+
+.formularioContacto label {
+    display: inline-block;
+}
+
+.anchoTotal {
+    width: 100%;
+}
+
 /*
 GRID
 */
 
+/* GALERIA */
+.gridGaleria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gridGaleriaItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+/* FOOTER */
+.grFooter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grFooterItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 /*
 FLEX
 */
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexItem {
+    align-items: stretch;
+}
+
+/*
+ID
+*/
+
+#galeria {
+    width: 100%;
+}
+
+#logoCorreo {
+    vertical-align: middle;
+}
+
+#podcast {
+    margin-bottom: 10px;
+}
+
+#newsletter {
+    width: 90%;
+    padding: 15px;
+    border: solid 2px black;
+    background-color: #105652;
+    color: white;
+    text-align: center;
+}
+
+#newsletter p {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Alínea la sección de redes a la defecha del grid */
+#redes {
+    justify-self: flex-end;
+}
+
+#mainContacto {
+    font-size: 2rem;
+}
+
+#contacto {
+    text-align: center;
+}
+
+#formularioContacto {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
 

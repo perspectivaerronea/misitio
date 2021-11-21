@@ -6,24 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/vbt0cvs.css">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- <link rel="stylesheet" href="../css/estilos.css"> -->
+    <link rel="stylesheet" href="../css/estilos2.css">
     <title>Perspectiva Errónea</title>
 </head>
 
 <body>
-
     <header>
-        <!-- El logo funciona como link al index -->
-        <h1 class="enLinea" id="Top"><a href="../index.html">Perspectiva Errónea</a></h1>
-        <nav class="enLinea">
-            <ul class="enLinea">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html#Podcast">Podcast</a></li>
-                <li><a href="../pages/perspectivas.html">Perspectivas</a></li>
-                <li><a href="../pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva Errónea?</a></li>
-                <li><a href="../pages/Contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="flex" id="top">
+            <h1 class="flexItem"><a href="../index.html">PERSPECTIVA ERRÓNEA</a></h1>
+            <nav class="flex">
+                <a class="flexItem" href="../index.html">Inicio</a>
+                <a class="flexItem" href="../index.html#podcast">Podcast</a>
+                <a class="flexItem" href="../pages/perspectivas.html">Perspectivas</a>
+                <a class="flexItem" href="../pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva Errónea?</a>
+                <a class="flexItem" href="../pages/Contacto.html">Contacto</a>
+            </nav>
+        </div>
     </header>
     <main>
         <!-- Esta página explica cual es el concepto detrás del sitio web -->
@@ -83,6 +82,11 @@
                 por conectar conmigo y con quien esté del otro lado, si sabrá mi psicóloga que
                 me cuesta conectar, jajaja.  
             </p>
+
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g6aP15K4fbI?start=45"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </article>
     </main>
     <div class="contenedorArriba">
@@ -90,29 +94,30 @@
     </div>
     <footer>
         <hr>
-        <section id="correoContacto" class="enLinea">
-            <h5>Contacto</h5>
-            <a href="#"><img src="../images/social/mail.png" alt="correo electronico" id="logoCorreo"></a>
-            <a href="#">info@perspectivaerronea.com</a>
-        </section>
-        <section id="redes" class="enLinea">
-            <h5>Nuestras Redes</h5>
-            <a href="https://www.youtube.com/channel/UCFo_0IP6qDqzvoY8tlY7BqQ?sub_confirmation=1"><img
-                    src="../images/social/youtube.png" alt="Sucribite al Canal de Youtube"></a>
-            <a href="https://open.spotify.com/show/72ZcZ0Csbau1TWOndLZYbx?si=e11cacf5ccb442b0"><img
-                    src="../images/social/spotify.png" alt="Seguí el podcast en Spotify"></a>
-            <a href="https://soundcloud.com/perspectivaerronea/tracks"><img src="../images/social/soundcloud.png"
-                    alt="Seguime en soundcloud"></a>
-            <a href="https://www.instagram.com/perspectivaerronea/"><img src="../images/social/instagram.png"
-                    alt="Seguime en Instagram"></a>
-            <a href="https://twitter.com/persperronea"><img src="../images/social/twitter.png"
-                    alt="Seguime en Twitter"></a>
-            <!--
-                Esto lo dejé para recordar consultar el tema de los iconos y el copyrigth
-            <div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
-                    href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
-            -->
-        </section>
+        <div class="grFooter">
+            <div class="grFooterItem">
+                <section id="correoContacto" class="enLinea">
+                    <h5>Contacto</h5>
+                    <a href="#"><img src="../images/social/mail.png" alt="correo electronico" id="logoCorreo"></a>
+                    <a href="#">info@perspectivaerronea.com</a>
+                </section>
+            </div>
+            <div id="redes" class="grFooterItem">
+                <section>
+                    <h5>Nuestras Redes</h5>
+                    <a href="https://www.youtube.com/channel/UCFo_0IP6qDqzvoY8tlY7BqQ?sub_confirmation=1">
+                        <img src="../images/social/youtube.png" alt="Sucribite al Canal de Youtube"></a>
+                    <a href="https://open.spotify.com/show/72ZcZ0Csbau1TWOndLZYbx?si=e11cacf5ccb442b0"><img
+                            src="../images/social/spotify.png" alt="Seguí el podcast en Spotify"></a>
+                    <a href="https://soundcloud.com/perspectivaerronea/tracks"><img
+                            src="../images/social/soundcloud.png" alt="Seguime en soundcloud"></a>
+                    <a href="https://www.instagram.com/perspectivaerronea/"><img src="../images/social/instagram.png"
+                            alt="Seguime en Instagram"></a>
+                    <a href="https://twitter.com/persperronea"><img src="../images/social/twitter.png"
+                            alt="Seguime en Twitter"></a>
+                </section>
+            </div>
+        </div>
         <h6>2021 | Todos los derechos reservados | Persectiva Errónea | Nicolás Padin</h6>
     </footer>
 </body>
