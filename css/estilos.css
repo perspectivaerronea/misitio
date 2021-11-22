@@ -291,6 +291,10 @@ ID
         left: 90%;   
     }
 
+    .derecha {
+        left: 90%;
+    }    
+
     .contenedorArriba img {
         width: 70%;
         height: 70%;
