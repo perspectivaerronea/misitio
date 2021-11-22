@@ -29,19 +29,33 @@
         <form id="formularioContacto" class="enLinea formularioContacto" action="../pages/Contacto.html" method="post">
             <fieldset>
                 <legend>Formulario de Contacto</legend>
-                <label for="nombre"> Nombre: </label>
-                <input class="anchoTotal" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
-                <label for="email"> e-mail: </label>
-                <input class="anchoTotal" type="email" name="email" id="email" placeholder="Ingrese su mail" required>
-                <label for="mensaje"> Mensaje: </label>
-                <textarea class="anchoTotal" name="mensaje" id="mensaje" cols="30" rows="10"
-                    placeholder="Ingrese su mensaje"></textarea>
-                <label for="newsletter"> ¿Quéres sumarte al newsletter? </label>
-                <input type="checkbox" name="newsletter" id="newsletterContacto" value="1" checked="si">
-                <label for="noRobot"> No soy un robot </label>
-                <input type="checkbox" name="noRobot" id="noRobot">
-
-                <input type="submit" value="Enviar Formulario" class="anchoTotal">
+                <div class="gridForm">
+                    <div class="gridFormItem">
+                        <label for="nombre"> Nombre: </label>
+                        <input class="anchoTotal" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="gridFormItem">
+                        <label for="email"> e-mail: </label>
+                        <input class="anchoTotal" type="email" name="email" id="email" placeholder="Ingrese su mail"
+                            required>
+                    </div>
+                    <div class="gridFormItem">
+                        <label for="mensaje"> Mensaje: </label>
+                        <textarea class="anchoTotal" name="mensaje" id="mensaje" cols="30" rows="10"
+                            placeholder="Ingrese su mensaje"></textarea>
+                    </div>
+                    <div class="gridFormItem">
+                        <label for="newsletter"> ¿Quéres sumarte al newsletter? </label>
+                        <input type="checkbox" name="newsletter" id="newsletterContacto" value="1" checked="si">
+                    </div>
+                    <div class="gridFormItem">
+                        <label for="noRobot"> No soy un robot </label>
+                        <input type="checkbox" name="noRobot" id="noRobot">
+                    </div>
+                    <div class="gridFormItem">
+                        <input type="submit" value="Enviar Mensaje" class="anchoTotal">
+                    </div>
+                </div>
             </fieldset>
         </form>
     </main>

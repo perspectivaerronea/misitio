@@ -48,8 +48,19 @@ hr {
     background-color: #105652
 }
 
-form input {
+input {
     margin-bottom: 0.5%;
+}
+
+label {
+    font-size: 1.5rem;
+}    
+
+input[type="submit"]{
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #FF4C29;
+    color:white;
 }
 
 /*
@@ -58,14 +69,13 @@ CLASES
 
 .contenedorArriba {
     position: fixed;
-    bottom: 0%;
-    right: 50%;
-    margin: 0 auto;
+    bottom: 0%;    
+    left: 50%;   
 }
 
 .contenedorArriba img {
-    width: 70px;
-    height: 70px;
+    width: 30%;
+    height: 30%;
 }
 
 .contenedorArriba a {
@@ -110,12 +120,11 @@ CLASES
 
 .posteosPerspectiva article img {
     width: 50%;
-    height: 50%;
-    display: block;
+    height: 50%;    
     margin: 0 auto;
 }
 
-.flex a {
+.hashtags {
     margin-top: 20px;
 }
 
@@ -125,6 +134,10 @@ CLASES
 
 .anchoTotal {
     width: 100%;
+}
+
+.imagenPost {
+    display:block;
 }
 
 /*
@@ -155,6 +168,11 @@ GRID
     justify-content: space-between;
 }
 
+/* CONTACTO */
+.gridForm {
+    grid-template-columns: repeat(1, 1fr);
+}
+
 
 /*
 FLEX
@@ -167,7 +185,7 @@ FLEX
 }
 
 .flexItem {
-    align-items: stretch;
+    align-items: center;
 }
 
 /*
@@ -176,6 +194,11 @@ ID
 
 #galeria {
     width: 100%;
+}
+
+#galeria img {
+    width: 100%;
+    height: 100%;
 }
 
 #logoCorreo {
@@ -222,4 +245,121 @@ ID
 }
 
 
+/* MEDIA QUERIES */
+@media(max-width: 1200px) {
+    .gridGaleria {        
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .posteos {
+        display: none;
+    }
+
+    .posteosPerspectiva {
+        margin-right: auto;
+    }
+    
+}
+
+@media(max-width: 1180px) {
+    #formularioContacto {        
+        width: 80%;        
+    }    
+}
+
+@media(max-width: 1030px) {
+
+    iframe {
+        width: 100%;
+    }
+    
+    .flex {
+        flex-direction: column;
+    }
+    .flex nav {
+        flex-direction: row;
+    }
+
+    .hashtags{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .contenedorArriba {        
+        bottom: 0%;    
+        left: 90%;   
+    }
+
+    .contenedorArriba img {
+        width: 70%;
+        height: 70%;
+    }    
+}
+
+@media(max-width: 768px) {
+
+    footer h5, footer h6 {        
+        text-align: center;
+    }
+
+    legend {
+        font-size: 1.5rem;
+    }    
+
+    label {
+        font-size: 1rem;
+    }    
+
+    .flex nav {
+        flex-direction: column;
+    }
+
+    .gridGaleria {        
+        grid-template-columns: repeat(1, 1fr);
+        justify-content:center;        
+    }
+
+    .gridGaleriaItem {        
+        justify-self:center;
+    }
+    
+    .gridGaleriaItem a {
+        margin: 0 auto;
+    }
+
+    .grFooter {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .grFooterItem {       
+        justify-content:center;
+        align-items: center;
+    }
+
+    #redes {
+        justify-self: center;
+    }
+
+    .imagenPost {
+        display: none;
+    }
+
+    .contenedorArriba {
+        display: none;
+    }
+
+    #formularioContacto {        
+        width: 100%;        
+    }
+
+    #contacto{
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    #newsletter p{
+        display: none;
+    }
+}
