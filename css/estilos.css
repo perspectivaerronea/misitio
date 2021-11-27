@@ -2,12 +2,16 @@
 ETIQUETAS HTML
 */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0px;
     padding-left: 4px;
     background-color: rgb(224, 224, 224);
     font-family: 'Korolev', sans-serif, monospace;
-    font-size: 20px;
+    font-size: 25px;
     color: #105652;
 }
 
@@ -54,13 +58,13 @@ input {
 
 label {
     font-size: 1.5rem;
-}    
+}
 
-input[type="submit"]{
+input[type="submit"] {
     font-size: 1rem;
     border-radius: 10px;
     background-color: #FF4C29;
-    color:white;
+    color: white;
 }
 
 /*
@@ -69,13 +73,13 @@ CLASES
 
 .contenedorArriba {
     position: fixed;
-    bottom: 0%;    
-    left: 50%;   
+    bottom: 0%;
+    left: 95%;
 }
 
 .contenedorArriba img {
-    width: 30%;
-    height: 30%;
+    width: 80%;
+    height: 80%;
 }
 
 .derecha {
@@ -129,12 +133,12 @@ CLASES
 
 .posteosPerspectiva article img {
     width: 50%;
-    height: 50%;    
+    height: 50%;
     margin: 0 auto;
 }
 
 .hashtags {
-    margin-top: 20px;
+    margin-top: 20px;    
 }
 
 .formularioContacto label {
@@ -146,8 +150,43 @@ CLASES
 }
 
 .imagenPost {
-    display:block;
+    display: block;
 }
+
+/* 
+TRANSFORMACIONES & ANIMACIONES
+*/
+
+.navAnim:hover {
+    color: #FF4C29;
+    transform: scale(1.09);
+}
+
+.hashtags a:hover {
+    color: rgba(119, 0, 255, 0.89);
+    transform: scale(1.2);
+}
+
+.hashtagsMarquesina{        
+    overflow: hidden;
+    transform: translateX(100%);
+    animation: textoMarquesina 7s linear infinite;
+}
+
+
+/*
+KEYFRAMES
+*/
+@keyframes textoMarquesina {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 
 /*
 GRID
@@ -195,6 +234,9 @@ FLEX
 
 .flexItem {
     align-items: center;
+    margin-left: 3px;
+    margin-right: 3px;
+
 }
 
 /*
@@ -257,7 +299,7 @@ ID
 
 
 @media(max-width: 1200px) {
-    .gridGaleria {        
+    .gridGaleria {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -268,10 +310,10 @@ ID
     .posteosPerspectiva {
         margin-right: auto;
     }
-    
-    #formularioContacto {        
-        width: 80%;        
-    }    
+
+    #formularioContacto {
+        width: 80%;
+    }
 }
 
 @media(max-width: 1030px) {
@@ -279,62 +321,64 @@ ID
     iframe {
         width: 100%;
     }
-    
+
     .flex {
         flex-direction: column;
     }
+
     .flex nav {
         flex-direction: row;
     }
 
-    .hashtags{
+    .hashtags {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
     }
 
-    .contenedorArriba {        
-        bottom: 0%;    
-        left: 90%;   
+    .contenedorArriba {
+        bottom: 0%;
+        left: 90%;
     }
 
     .derecha {
         left: 90%;
-    }    
+    }
 
     .contenedorArriba img {
         width: 70%;
         height: 70%;
-    }    
+    }
 }
 
 @media(max-width: 768px) {
 
-    footer h5, footer h6 {        
+    footer h5,
+    footer h6 {
         text-align: center;
     }
 
     legend {
         font-size: 1.5rem;
-    }    
+    }
 
     label {
         font-size: 1rem;
-    }    
+    }
 
     .flex nav {
         flex-direction: column;
     }
 
-    .gridGaleria {        
+    .gridGaleria {
         grid-template-columns: repeat(1, 1fr);
-        justify-content:center;        
+        justify-content: center;
     }
 
-    .gridGaleriaItem {        
-        justify-self:center;
+    .gridGaleriaItem {
+        justify-self: center;
     }
-    
+
     .gridGaleriaItem a {
         margin: 0 auto;
     }
@@ -344,8 +388,8 @@ ID
         justify-items: center;
     }
 
-    .grFooterItem {       
-        justify-content:center;
+    .grFooterItem {
+        justify-content: center;
         align-items: center;
     }
 
@@ -361,12 +405,12 @@ ID
         display: none;
     }
 
-    #contacto{
+    #contacto {
         width: 100%;
         font-size: 2rem;
     }
 
-    #newsletter p{
+    #newsletter p {
         display: none;
     }
 }
@@ -379,7 +423,8 @@ ID
 
 @media(max-width: 460px) {
 
-    main, section {
+    main,
+    section {
         width: 90%;
     }
 
@@ -393,17 +438,17 @@ ID
 
     legend {
         font-size: 1.2rem;
-    }    
+    }
 
     label {
         font-size: 0.8rem;
-    }  
-
-    #formularioContacto {        
-        width: 100%;        
     }
 
-    #contacto{        
+    #formularioContacto {
+        width: 100%;
+    }
+
+    #contacto {
         font-size: 1.8rem;
     }
 }
