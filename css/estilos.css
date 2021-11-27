@@ -371,6 +371,12 @@ ID
     }
 }
 
+@media(max-width: 535px) {
+    legend {
+        font-size: 1.3rem;
+    }
+}
+
 @media(max-width: 460px) {
 
     main, section {
