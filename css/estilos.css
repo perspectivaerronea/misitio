@@ -11,7 +11,7 @@ body {
     padding-left: 4px;
     background-color: rgb(224, 224, 224);
     font-family: 'Korolev', sans-serif, monospace;
-    font-size: 25px;
+    font-size: 20px;
     color: #105652;
 }
 
@@ -138,7 +138,9 @@ CLASES
 }
 
 .hashtags {
-    margin-top: 20px;    
+    margin-top: 20px;
+    font-size: 20px;
+    overflow: hidden;
 }
 
 .formularioContacto label {
@@ -159,7 +161,7 @@ TRANSFORMACIONES & ANIMACIONES
 
 .navAnim:hover {
     color: #FF4C29;
-    transform: scale(1.09);
+    transform: scale(1.08);
 }
 
 .hashtags a:hover {
@@ -167,10 +169,10 @@ TRANSFORMACIONES & ANIMACIONES
     transform: scale(1.2);
 }
 
-.hashtagsMarquesina{        
-    overflow: hidden;
+.hashtagsMarquesina {
+    width: 100%;
     transform: translateX(100%);
-    animation: textoMarquesina 7s linear infinite;
+    animation: textoMarquesina 12s linear infinite;
 }
 
 
@@ -178,11 +180,11 @@ TRANSFORMACIONES & ANIMACIONES
 KEYFRAMES
 */
 @keyframes textoMarquesina {
-    from {
+    0% {
         transform: translateX(100%);
     }
 
-    to {
+    100% {
         transform: translateX(-100%);
     }
 }
@@ -236,7 +238,12 @@ FLEX
     align-items: center;
     margin-left: 3px;
     margin-right: 3px;
+}
 
+.hashtagsMarquesina {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /*
@@ -316,7 +323,7 @@ ID
     }
 }
 
-@media(max-width: 1030px) {
+@media(max-width: 1060px) {
 
     iframe {
         width: 100%;
