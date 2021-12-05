@@ -49,6 +49,8 @@ h2 {
 iframe {
     display: block;
     margin: 0 auto;
+    width: 80%;
+    height: 600px;
 }
 
 hr {
@@ -142,6 +144,27 @@ CLASES
     color: white;
 }
 
+.no-blank {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contenedorMedia {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* 
 TRANSFORMACIONES & ANIMACIONES
@@ -322,7 +345,7 @@ ID
 
 .accordion-button,
 .accordion-item {
-    background-color: rgb(224, 224, 224);
+    background-color: #f8f9fa;
 }
 
 .accordion-item article img {
@@ -346,8 +369,8 @@ ID
 
 
 
-/* MEDIA QUERIES */
 
+/* MEDIA QUERIES */
 @media(max-width: 1200px) {
 
     .contenedorArriba {
@@ -372,9 +395,15 @@ ID
     .accordion {
         margin: 0 auto;
     }
+
+
 }
 
 @media(max-width: 992px) {
+
+    main {
+        margin-bottom: 15px;
+    }
 
     main,
     section {
@@ -390,16 +419,17 @@ ID
         margin: 0 auto;
     }
 
+    iframe {
+        width: inherit;
+        height: inherit;
+    }
+
     .contenedorArriba {
         display: none;
     }
 
     #correoContacto .flex {
         justify-content: center;
-    }
-
-    #newsletter p {
-        display: none;
     }
 
     .nav-link,
@@ -421,6 +451,20 @@ ID
         height: 70%;
     }
 
+    .newsletter input[type=email] {
+        margin-bottom: 10px;
+    }
+
+    .no-blank {
+        overflow: inherit;
+    }
+
+    #newsletter p {
+        display: none;
+    }
+
+
+
 }
 
 @media(max-width: 768) {
@@ -429,5 +473,10 @@ ID
         height: 100%;
         margin: 0;
     }
+
+    .toast-container {
+        display: none;
+    }
+
 
 }
