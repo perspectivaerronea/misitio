@@ -7,79 +7,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Uso de Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/vbt0cvs.css">
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Link a los estilos de la página -->
     <link rel="stylesheet" href="./css/estilos.css">
     <title>Perspectiva Errónea</title>
 </head>
 
 <body>
-
     <header>
-        <div class="flex" id="top">
-            <h1 class="flexItem"><a href="index.html">PERSPECTIVA ERRÓNEA</a></h1>
-            <nav class="flex">
-                <a class="flexItem navAnim" href="index.html">Inicio</a>
-                <a class="flexItem navAnim" href="#podcast">Podcast</a>
-                <a class="flexItem navAnim" href="./pages/perspectivas.html">Perspectivas</a>
-                <a class="flexItem navAnim" href="./pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva Errónea?</a>
-                <a class="flexItem navAnim" href="./pages/contacto.html">Contacto</a>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-light navColor">
+            <div class="container-fluid">
+                <a class="navbar-brand navItemColor" href="#">PERSPECTIVA ERRÓNEA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-0 mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle navItemColor" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Inicio
+                            </a>
+                            <ul class="dropdown-menu ms-auto" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Inicio</a></li>
+                                <li><a class="dropdown-item" href="#galeria">Galeria</a></li>
+                                <li><a class="dropdown-item" href="#podcast">Podcast</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/perspectivas.html">Perspectivas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva
+                                Errónea?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
     </header>
     <main>
         <article class="principal">
             <hr>
             <h2>La Novedad</h2>
-            <iframe width="70%" height="315" src="https://www.youtube-nocookie.com/embed/fUWDGacLwiY"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+            <p>¡Por fin llegó! Se hizo esperar pero acá está el segundo episodio del podcast. Y cómo todo se recicla la
+                temática va a ser lo que caracteriza al último video del canal que fue un VLOG. Así que va a ir de eso
+                de compartir mi experiencia y como lo llevé adelante; pero no voy a estar solo en este paseo, sino que
+                ¡HAY UNA PERSONA INVITADA! </p>
+            <p>Uno pensaría que sumar otra voz a la edición de un podcast no es complicado, bueno, si uno piensa así,
+                pensaría fuera del recipiente. </p>
+            <p>Una cosita más, ¿sabes cuantas veces se dice la palabra vlog a lo largo del podcast?</p>
+            <div class="contenedorMedia">
+                <iframe class="media" src="https://www.youtube-nocookie.com/embed/fUWDGacLwiY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
         </article>
     </main>
     <section id="galeria">
         <article>
             <hr>
             <h2>Galería NFT</h2>
-            <div class="gridGaleria">
-                <div class="gridGaleriaItem">
-                    <a href="https://www.hicetnunc.art/objkt/333688"><img class="imgAnimacion"
-                            src="./images/nft/lurkingdarkness.jpg"
-                            alt="Una mano gigante se asoma desde la oscuridad asechando a unx transeunte"></a>
-                </div>
-                <div class="gridGaleriaItem">
-                    <a href="https://www.hicetnunc.art/objkt/264980"><img src="./images/nft/wondernigth.jpg"
-                            alt="Navegando en un oceano de nubes oniricas"></a>
-                </div>
-                <div class="gridGaleriaItem">
-                    <a href="https://www.hicetnunc.art/objkt/253691"><img src="./images/nft/leap.jpg"
-                            alt="Un salto al vacio del espacio"></a>
-                </div>
-                <div class="gridGaleriaItem">
-                    <a href="https://www.hicetnunc.art/objkt/235126"><img src="./images/nft/foundyou.jpg"
-                            alt="Un ojo reptiliano mirando fijamente a una persona"></a>
-                </div>
-                <div class="gridGaleriaItem">
-                    <a href="https://www.hicetnunc.art/objkt/228634"><img src="./images/nft/expectedencounter.jpg"
-                            alt="Una mujer cara a cara con una serpiente gigante"></a>
-                </div>
-                <div class="gridGaleriaItem">
-                    <a href="https://www.hicetnunc.art/objkt/225812"><img src="./images/nft/faro.jpg"
-                            alt="Un poco de luz guía en un vaso de agua."></a>
-                </div>
-                <div class="gridGaleriaItem">
-                    <a href="https://www.hicetnunc.art/objkt/210120"><img src="./images/nft/pecera.jpg"
-                            alt="¿Y si el universo es una pecera gigante?"></a>
-                </div>
-                <div class="gridGaleriaItem">
-                    <a href="https://www.hicetnunc.art/objkt/205653"><img src="./images/nft/caida.jpg"
-                            alt="La caida puede tardar en terminar."></a>
-                </div>
-                <div class="gridGaleriaItem">
-                    <a href="https://www.hicetnunc.art/objkt/204640"><img src="./images/nft/bailarina.jpg"
-                            alt="Me parece vislumbrar una mujer en la flama de la vela."></a>
-                </div>
-            </div>
 
+            <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Lurking Darkness"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Wonder Night"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Leap of Faith"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                        aria-label="Found You"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                        aria-label="Expected Encounter"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                        aria-label="Glass of Water"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"
+                        aria-label="Fish Bowl"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7"
+                        aria-label="Drop"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8"
+                        aria-label="Flame Dancer"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <a href="https://www.hicetnunc.art/objkt/333688">
+                            <img src="./images/nft/lurkingdarkness.jpg" class="d-block w-100"
+                                alt="Una mano gigante se asoma desde la oscuridad asechando a unx transeunte">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Lurking Darkness</h5>
+                            <p>Una mano gigante se asoma desde la oscuridad asechando a unx transeunte.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <a href="https://www.hicetnunc.art/objkt/264980">
+                            <img src="./images/nft/wondernigth.jpg" class="d-block w-100"
+                                alt="Navegando en un oceano de nubes oniricas">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Wonder Night</h5>
+                            <p>Navegando en un oceano de nubes oniricas.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <a href="https://www.hicetnunc.art/objkt/253691">
+                            <img src="./images/nft/leap.jpg" class="d-block w-100" alt="Un salto al vacio del espacio">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Leap of Faith</h5>
+                            <p>Un salto al vacio del espacio.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <a href="https://hicetnunc.art/objkt/235126">
+                            <img src="./images/nft/foundyou.jpg" class="d-block w-100"
+                                alt="Un ojo reptiliano mirando fijamente a una persona">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Found You</h5>
+                            <p>Un ojo reptiliano mirando fijamente a una persona.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <a href="https://www.hicetnunc.art/objkt/228634">
+                            <img src="./images/nft/expectedEncounter.jpg" class="d-block w-100"
+                                alt="Una mujer cara a cara con una serpiente gigante">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Expected Encounter</h5>
+                            <p>Una mujer cara a cara con una serpiente gigante.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <a href="https://hicetnunc.art/objkt/225812">
+                            <img src="./images/nft/faro.jpg" class="d-block w-100"
+                                alt="Un poco de luz guía en un vaso de agua">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Glass of Water</h5>
+                            <p>Un poco de luz guía en un vaso de agua.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <a href="https://www.hicetnunc.art/objkt/210120">
+                            <img src="./images/nft/pecera.jpg" class="d-block w-100"
+                                alt="¿Y si el universo es una pecera gigante?">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Fish Bowl</h5>
+                            <p>¿Y si el universo es una pecera gigante?</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <a href="https://www.hicetnunc.art/objkt/205653">
+                            <img src="./images/nft/caida.jpg" class="d-block w-100"
+                                alt="La caida puede tardar en terminar.">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Drop</h5>
+                            <p>La caida puede tardar en terminar.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <a href="https://www.hicetnunc.art/objkt/204640">
+                            <img src="./images/nft/bailarina.jpg" class="d-block w-100"
+                                alt="Me parece vislumbrar una mujer en la flama de la vela.">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Flame Dancer</h5>
+                            <p>Me parece vislumbrar una mujer en la flama de la vela.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </article>
     </section>
     <section id="podcast">
@@ -87,16 +208,17 @@
         <h2>Podcast</h2>
         <p>No hace falta más que darle play para comenzar a escuchar los episodios del podcast. Está, como quien dice,
             servido en bandeja.</p>
-        <iframe src="https://open.spotify.com/embed/playlist/38eHjsPhKW5w7OKEJMdubm?utm_source=generator&amp;theme=0"
-            width="100%" height="380" frameBorder="0" allowfullscreen=""
+        <iframe width="100%" height="380"
+            src="https://open.spotify.com/embed/playlist/38eHjsPhKW5w7OKEJMdubm?utm_source=generator&amp;theme=0"
+            frameBorder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     </section>
     <section id="newsletter">
         <article>
             <p>Anotate para recibir el newsletter con todas las novedades y borrar el FOMO de la ecuación.</p>
-            <form action="./index.html" method="post" class="newsletter">
-                <input type="email" name="" id="" placeholder="correo electronico">
-                <input type="submit" value="Suscribirse">
+            <form action="./index.html" method="post" class="newsletter ">
+                <input type="email" id="email" placeholder="correo electronico">
+                <button type="submit" class="btn btnColor">Suscribirse</button>
             </form>
         </article>
     </section>
@@ -105,32 +227,49 @@
     </div>
     <footer>
         <hr>
-        <div class="grFooter">
-            <div class="grFooterItem">
-                <section id="correoContacto" class="enLinea">
-                    <h5>Contacto</h5>
-                    <a href="#"><img src="./images/social/mail.png" alt="correo electronico" id="logoCorreo"></a>
-                    <a href="#">info@perspectivaerronea.com</a>
-                </section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-lg-7 col-xl-8">
+
+                    <section id="correoContacto" class="enLinea">
+                        <h5>Contacto</h5>
+                        <div class="flex">
+                            <a href="#"><img src="./images/social/mail.png" alt="correo electronico"
+                                    id="logoCorreo"></a>
+                            <a href="#">info@perspectivaerronea.com</a>
+                        </div>
+                    </section>
+                </div>
+                <div id="redes" class="col-md-6 col-lg-5 col-xl-4">
+                    <section>
+                        <h5>Nuestras Redes</h5>
+                        <div class="flex">
+                            <a href="https://www.youtube.com/channel/UCFo_0IP6qDqzvoY8tlY7BqQ?sub_confirmation=1">
+                                <img src="./images/social/youtube.png" alt="Sucribite al Canal de Youtube"></a>
+                            <a href="https://open.spotify.com/show/72ZcZ0Csbau1TWOndLZYbx?si=e11cacf5ccb442b0"><img
+                                    src="./images/social/spotify.png" alt="Seguí el podcast en Spotify"></a>
+                            <a href="https://soundcloud.com/perspectivaerronea/tracks"><img
+                                    src="./images/social/soundcloud.png" alt="Seguime en soundcloud"></a>
+                            <a href="https://www.instagram.com/perspectivaerronea/"><img
+                                    src="./images/social/instagram.png" alt="Seguime en Instagram"></a>
+                            <a href="https://twitter.com/persperronea"><img src="./images/social/twitter.png"
+                                    alt="Seguime en Twitter"></a>
+                        </div>
+                    </section>
+                </div>
             </div>
-            <div id="redes" class="grFooterItem">
-                <section>
-                    <h5>Nuestras Redes</h5>
-                    <a href="https://www.youtube.com/channel/UCFo_0IP6qDqzvoY8tlY7BqQ?sub_confirmation=1">
-                        <img src="./images/social/youtube.png" alt="Sucribite al Canal de Youtube"></a>
-                    <a href="https://open.spotify.com/show/72ZcZ0Csbau1TWOndLZYbx?si=e11cacf5ccb442b0"><img
-                            src="./images/social/spotify.png" alt="Seguí el podcast en Spotify"></a>
-                    <a href="https://soundcloud.com/perspectivaerronea/tracks"><img src="./images/social/soundcloud.png"
-                            alt="Seguime en soundcloud"></a>
-                    <a href="https://www.instagram.com/perspectivaerronea/"><img src="./images/social/instagram.png"
-                            alt="Seguime en Instagram"></a>
-                    <a href="https://twitter.com/persperronea"><img src="./images/social/twitter.png"
-                            alt="Seguime en Twitter"></a>
-                </section>
+            <div class="row">
+                <div class="col-12">
+                    <h6>2021 | Todos los derechos reservados | Persectiva Errónea | Nicolás Padin</h6>
+                </div>
             </div>
         </div>
-        <h6>2021 | Todos los derechos reservados | Persectiva Errónea | Nicolás Padin</h6>
     </footer>
+
+    <!-- SCRIPT - Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -8,10 +8,10 @@ html {
 
 body {
     margin: 0px;
-    padding-left: 4px;
     background-color: rgb(224, 224, 224);
     font-family: 'Korolev', sans-serif, monospace;
-    font-size: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
     color: #105652;
 }
 
@@ -19,6 +19,10 @@ main,
 section {
     width: 70%;
     margin: 0 auto;
+}
+
+article {
+    padding-left: 4px;
 }
 
 footer section {
@@ -39,11 +43,14 @@ a {
 
 h2 {
     margin: 0 auto;
+    font-weight: 900;
 }
 
 iframe {
     display: block;
     margin: 0 auto;
+    width: 80%;
+    height: 600px;
 }
 
 hr {
@@ -52,29 +59,15 @@ hr {
     background-color: #105652
 }
 
-input {
-    margin-bottom: 0.5%;
-}
-
-label {
-    font-size: 1.5rem;
-}
-
-input[type="submit"] {
-    font-size: 1rem;
-    border-radius: 10px;
-    background-color: #FF4C29;
-    color: white;
-}
-
 /*
 CLASES
 */
 
 .contenedorArriba {
     position: fixed;
-    bottom: 0%;
+    bottom: 40%;
     left: 95%;
+    z-index: 2;
 }
 
 .contenedorArriba img {
@@ -121,20 +114,10 @@ CLASES
 
 .posteos ul li {
     display: list-item;
-    list-style-type: circle;
+    list-style-type: none;
     font-size: 1.2rem;
     font-weight: 700;
     margin: 2% auto;
-}
-
-.posteosPerspectiva {
-    margin-right: 25%;
-}
-
-.posteosPerspectiva article img {
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
 }
 
 .hashtags {
@@ -153,6 +136,34 @@ CLASES
 
 .imagenPost {
     display: block;
+}
+
+.btnColor {
+    border-radius: 10px;
+    background-color: #FF4C29;
+    color: white;
+}
+
+.no-blank {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contenedorMedia {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* 
@@ -175,6 +186,17 @@ TRANSFORMACIONES & ANIMACIONES
     animation: textoMarquesina 12s linear infinite;
 }
 
+.popup1000 {
+    animation: mostrarPopup 1s;
+}
+
+.popup3000 {
+    animation: mostrarPopup 3s;
+}
+
+.popup5000 {
+    animation: mostrarPopup 5s;
+}
 
 /*
 KEYFRAMES
@@ -189,40 +211,15 @@ KEYFRAMES
     }
 }
 
+@keyframes mostrarPopup {
+    0% {
+        transform: scale(0);
+    }
 
-/*
-GRID
-*/
-
-/* GALERIA */
-.gridGaleria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    100% {
+        transform: scale(0);
+    }
 }
-
-.gridGaleriaItem {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-
-/* FOOTER */
-.grFooter {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.grFooterItem {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* CONTACTO */
-.gridForm {
-    grid-template-columns: repeat(1, 1fr);
-}
-
 
 /*
 FLEX
@@ -234,12 +231,6 @@ FLEX
     align-items: center;
 }
 
-.flexItem {
-    align-items: center;
-    margin-left: 3px;
-    margin-right: 3px;
-}
-
 .hashtagsMarquesina {
     display: flex;
     justify-content: space-evenly;
@@ -249,15 +240,6 @@ FLEX
 /*
 ID
 */
-
-#galeria {
-    width: 100%;
-}
-
-#galeria img {
-    width: 100%;
-    height: 100%;
-}
 
 #logoCorreo {
     vertical-align: middle;
@@ -271,6 +253,7 @@ ID
     width: 90%;
     padding: 15px;
     border: solid 2px black;
+    border-radius: 19px;
     background-color: #105652;
     color: white;
     text-align: center;
@@ -283,13 +266,10 @@ ID
     vertical-align: middle;
 }
 
-/* Alínea la sección de redes a la defecha del grid */
+
+/* Alínea la sección de redes a la derecha del grid */
 #redes {
     justify-self: flex-end;
-}
-
-#mainContacto {
-    font-size: 2rem;
 }
 
 #contacto {
@@ -302,160 +282,201 @@ ID
     margin: 0 auto;
 }
 
+#correoContacto .flex {
+    justify-content: start;
+}
+
+/* BOOTSTRAP */
+
+
+.navColor,
+.dropdown-menu {
+    background-color: #105652;
+}
+
+.navbar a,
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-item .nav-link {
+    color: #f8f9fa;
+}
+
+.navbar-light,
+.navbar-brand,
+.nav-link,
+.navItemColor {
+    color: #f8f9fa;
+}
+
+.carousel-inner {
+    margin: 0 auto;
+    max-width: 65%;
+    max-height: 65%;
+}
+
+.carousel-caption {
+    background-color: black;
+    border-radius: 20px;
+    background-color: #105652;
+    padding: 5px auto;
+    margin: 15px;
+}
+
+.carousel-caption a {
+    padding: 0;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 60%;
+    height: 60%;
+}
+
+.accordion {
+    margin-right: 20%;
+    margin-left: 5%;
+}
+
+.accordion-button,
+.accordion-item {
+    background-color: #f8f9fa;
+}
+
+.accordion-item article img {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+.toast,
+.toast-header {
+    background-color: rgba(224, 224, 224, 0.712);
+}
+
+.toast-header img {
+    width: 10%;
+}
+
+.toast-body a {
+    margin: 0 auto;
+}
+
+
+
+
 /* MEDIA QUERIES */
-
-
 @media(max-width: 1200px) {
-    .gridGaleria {
-        grid-template-columns: repeat(2, 1fr);
+
+    .contenedorArriba {
+        left: 90%;
+    }
+
+    .contenedorArriba img {
+        width: 80%;
+        height: 80%;
     }
 
     .posteos {
         display: none;
     }
 
-    .posteosPerspectiva {
-        margin-right: auto;
+    .carousel-inner {
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 100%;
     }
 
-    #formularioContacto {
-        width: 80%;
-    }
-}
-
-@media(max-width: 1060px) {
-
-    iframe {
-        width: 100%;
-    }
-
-    .flex {
-        flex-direction: column;
-    }
-
-    .flex nav {
-        flex-direction: row;
-    }
-
-    .hashtags {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .contenedorArriba {
-        bottom: 0%;
-        left: 90%;
-    }
-
-    .derecha {
-        left: 90%;
-    }
-
-    .contenedorArriba img {
-        width: 70%;
-        height: 70%;
-    }
-}
-
-@media(max-width: 768px) {
-
-    footer h5,
-    footer h6 {
-        text-align: center;
-    }
-
-    legend {
-        font-size: 1.5rem;
-    }
-
-    label {
-        font-size: 1rem;
-    }
-
-    .flex nav {
-        flex-direction: column;
-    }
-
-    .gridGaleria {
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
-    }
-
-    .gridGaleriaItem {
-        justify-self: center;
-    }
-
-    .gridGaleriaItem a {
+    .accordion {
         margin: 0 auto;
     }
 
-    .grFooter {
-        grid-template-columns: repeat(1, 1fr);
-        justify-items: center;
-    }
 
-    .grFooterItem {
-        justify-content: center;
-        align-items: center;
-    }
-
-    #redes {
-        justify-self: center;
-    }
-
-    .imagenPost {
-        display: none;
-    }
-
-    .contenedorArriba {
-        display: none;
-    }
-
-    #contacto {
-        width: 100%;
-        font-size: 2rem;
-    }
-
-    #newsletter p {
-        display: none;
-    }
 }
 
-@media(max-width: 535px) {
-    legend {
-        font-size: 1.3rem;
-    }
-}
+@media(max-width: 992px) {
 
-@media(max-width: 460px) {
+    main {
+        margin-bottom: 15px;
+    }
 
     main,
     section {
         width: 90%;
     }
 
-    h1 {
-        font-size: 1.8rem;
+    footer h5,
+    footer h6 {
+        text-align: center;
     }
 
-    h2 {
-        font-size: 1.4rem;
+    footer .row {
+        margin: 0 auto;
     }
 
-    legend {
-        font-size: 1.2rem;
+    iframe {
+        width: inherit;
+        height: inherit;
     }
 
-    label {
-        font-size: 0.8rem;
+    .contenedorArriba {
+        display: none;
     }
 
-    #formularioContacto {
+    #correoContacto .flex {
+        justify-content: center;
+    }
+
+    .nav-link,
+    .dropdown-item {
+        text-align: right;
+    }
+
+    .nav-item.dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown-menu.show {
+        width: max-content;
+    }
+
+    .accordion-item article img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .newsletter input[type=email] {
+        margin-bottom: 10px;
+    }
+
+    .no-blank {
+        overflow: inherit;
+    }
+
+    #newsletter p {
+        display: none;
+    }
+
+
+
+}
+
+@media(max-width: 768) {
+    .accordion-item article img {
         width: 100%;
+        height: 100%;
+        margin: 0;
     }
 
-    #contacto {
-        font-size: 1.8rem;
+    .toast-container {
+        display: none;
     }
+
+
 }
