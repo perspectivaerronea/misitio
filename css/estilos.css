@@ -2,17 +2,23 @@
 ETIQUETAS HTML
 */
 
+* {
+    /* outline: solid 1px red; */
+    /* border: 1px solid red; */
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    min-height: 100%;
     margin: 0px;
     background-color: rgb(224, 224, 224);
     font-family: 'Korolev', sans-serif, monospace;
     font-size: 1.2rem;
     font-weight: 700;
-    color: #105652;
+
 }
 
 main,
@@ -166,6 +172,10 @@ CLASES
     height: 100%;
 }
 
+.abajo {
+
+}
+
 /* 
 TRANSFORMACIONES & ANIMACIONES
 */
@@ -266,14 +276,12 @@ ID
     vertical-align: middle;
 }
 
-
-/* Alínea la sección de redes a la derecha del grid */
 #redes {
     justify-self: flex-end;
 }
 
 #contacto {
-    text-align: center;
+    text-align: center;    
 }
 
 #formularioContacto {
