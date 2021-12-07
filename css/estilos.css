@@ -12,7 +12,6 @@ body {
     font-family: 'Korolev', sans-serif, monospace;
     font-size: 1.2rem;
     font-weight: 700;
-    color: #105652;
 }
 
 main,
@@ -166,6 +165,7 @@ CLASES
     height: 100%;
 }
 
+
 /* 
 TRANSFORMACIONES & ANIMACIONES
 */
@@ -266,14 +266,12 @@ ID
     vertical-align: middle;
 }
 
-
-/* Alínea la sección de redes a la derecha del grid */
 #redes {
     justify-self: flex-end;
 }
 
 #contacto {
-    text-align: center;
+    text-align: center;    
 }
 
 #formularioContacto {
