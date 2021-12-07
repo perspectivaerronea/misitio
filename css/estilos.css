@@ -13,7 +13,6 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     color: #105652;
-    
 }
 
 main,
@@ -473,10 +472,4 @@ ID
         height: 100%;
         margin: 0;
     }
-
-    .toast-container {
-        display: none;
-    }
-
-
 }
