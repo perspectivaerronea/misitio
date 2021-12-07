@@ -2,23 +2,16 @@
 ETIQUETAS HTML
 */
 
-* {
-    /* outline: solid 1px red; */
-    /* border: 1px solid red; */
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    min-height: 100%;
     margin: 0px;
     background-color: rgb(224, 224, 224);
     font-family: 'Korolev', sans-serif, monospace;
     font-size: 1.2rem;
     font-weight: 700;
-
 }
 
 main,
@@ -172,9 +165,6 @@ CLASES
     height: 100%;
 }
 
-.abajo {
-
-}
 
 /* 
 TRANSFORMACIONES & ANIMACIONES
