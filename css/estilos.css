@@ -370,6 +370,13 @@ ID
 
 
 /* MEDIA QUERIES */
+
+@media(min-width: 1201px) {
+    html{
+        height: 100%;
+    }
+}
+
 @media(max-width: 1200px) {
 
     .contenedorArriba {
