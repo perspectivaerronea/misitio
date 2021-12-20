@@ -1,0 +1,50 @@
+
+/* 
+TRANSFORMACIONES & ANIMACIONES
+*/
+
+.navAnim:hover {
+    @include modHover($color-principal, 1.08);
+}
+
+.hashtags a:hover {
+    @include modHover($color-hover, 1.2);
+}
+
+.hashtagsMarquesina {
+    width: 100%;
+    transform: translateX(100%);
+    animation: textoMarquesina 12s linear infinite;
+}
+
+// Armado de los tiempos de animación
+@for $i from 1 through 5 {
+    .popup#{$i * 1000}{        
+            @include animacionPopUp(#{$i}s);
+    }
+}
+
+/*
+KEYFRAMES
+*/
+
+
+@keyframes textoMarquesina {
+    0% {
+        @include animMarquesina(100%)
+    }
+
+    100% {
+        @include animMarquesina(-100%)
+    }
+}
+
+@keyframes mostrarPopup {
+    0% {
+        @include escalaPopup(0);
+    }
+
+    100% {
+        @include escalaPopup(0);
+    }
+}

@@ -1,0 +1,59 @@
+//CSS para Etiquetas particulares
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    background-color: $color-fondo;
+    @include formatoTexto;
+}
+
+main,
+section {
+    width: 70%;
+    margin: 0 auto;
+}
+
+article {
+    padding-left: 4px;
+}
+
+footer {
+    section {
+        width: 100%;
+    }
+
+    img {
+        @include wh-eq(50px);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $color-principal;
+    margin: 0;
+    padding: 5px;
+}
+
+h1 {
+    font-weight: $font-weight;
+}
+
+h2 {
+    margin: 0 auto;
+    font-weight: $font-weight+200;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    @include wh-dif(80%, 600px);
+}
+
+hr {
+    height: 4px;
+    border-width: 0;
+    background-color: $color-principal;
+}

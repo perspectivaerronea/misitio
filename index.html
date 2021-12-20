@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--SEO-->
+    <meta name="keywords" content="podcast, entretenimiento, música, nft, youtube, perspectiva errónea">
+    <meta name="description"
+        content="En esta página se encuentra lo último que salió en el canal de youtube, mi galeria de NFT y los episodios del podcast en Spotify.">
     <!-- Uso de Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/vbt0cvs.css">
     <!-- Link Bootstrap -->
@@ -12,14 +16,14 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Link a los estilos de la página -->
     <link rel="stylesheet" href="./css/estilos.css">
-    <title>Perspectiva Errónea</title>
+    <title>Perspectiva Errónea - Inicio</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light navColor">
             <div class="container-fluid">
-                <a class="navbar-brand navItemColor" href="#">PERSPECTIVA ERRÓNEA</a>
+                <h1><a class="navbar-brand navItemColor" href="#">PERSPECTIVA ERRÓNEA</a></h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -73,30 +77,71 @@
             </div>
         </article>
     </main>
+    <section id="perspectivas">
+        <article>
+            <hr>
+            <h2>Perspectivas</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4" data-masonry="{" percentPosition": true }">
+                <div class="col">
+                    <div class="card h-100">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Resumen Anual 2021</h5>
+                            <p class="card-text">Investigación, opinión, seriedad, joda, cantitos de cancha, la música
+                                en la dictadura, las canciones que nos vuelan la cabeza, el arte digital, la psicología
+                                del rock y más.</p>
+                            <a href="./pages/perspectivas.html#collapseLast" class="btn btnColor"
+                                data-bs-target="#collapseLast" aria-expanded="true" aria-controls="collapseLast">Ver
+                                más...</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">07/12/2021</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">¿NFT?¿Eso con qué se come? - Introducción al Critptoarte</h5>
+                            <p class="card-text">Una pequeña introducción al Critoarte, una conversación con el
+                                productor y DJ Tibau Mascheroni.</p>
+                            <a href="./pages/perspectivas.html#collapseOne" class="btn btnColor"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Ver
+                                más...</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">26/11/2021</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
     <section id="galeria">
         <article>
             <hr>
             <h2>Galería NFT</h2>
 
-            <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+            <div id="carouselGaleria" class="carousel carousel-light slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Lurking Darkness"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="1"
                         aria-label="Wonder Night"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="2"
                         aria-label="Leap of Faith"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="3"
                         aria-label="Found You"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="4"
                         aria-label="Expected Encounter"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="5"
                         aria-label="Glass of Water"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="6"
                         aria-label="Fish Bowl"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7"
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="7"
                         aria-label="Drop"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8"
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="8"
                         aria-label="Flame Dancer"></button>
                 </div>
                 <div class="carousel-inner">
@@ -190,12 +235,12 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
@@ -208,7 +253,7 @@
         <h2>Podcast</h2>
         <p>No hace falta más que darle play para comenzar a escuchar los episodios del podcast. Está, como quien dice,
             servido en bandeja.</p>
-        <iframe width="100%" height="380"
+        <iframe width="100%" height="300" title="Lista Episodios de mi Podcast"
             src="https://open.spotify.com/embed/playlist/38eHjsPhKW5w7OKEJMdubm?utm_source=generator&amp;theme=0"
             frameBorder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -270,6 +315,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <!-- Este script permite hacer uso de un layour masonry. Es el sugerido por la página de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
 </body>
 
 </html>

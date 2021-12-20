@@ -1,0 +1,104 @@
+/*
+CLASES
+*/
+
+
+.contenedorArriba {
+    position: fixed;
+    bottom: 40%;
+    left: 95%;
+    z-index: 2;
+
+    img {
+        @include wh-eq(80%);
+    }
+
+    a {
+        @include wh-eq(auto);
+    }
+}
+
+.derecha {
+
+    left: 90%;
+
+    img {
+        @include wh-eq(60%);
+    }
+}
+
+.posteos {
+    position: fixed;
+    top: 38%;
+    right: 1px;
+    width: 18%;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 1%;
+    @include armarBorde(solid, 2px, $color-principal, 0px, $color-fondo);
+    z-index: 10;
+
+    h6 {
+        margin: 2% auto;
+        text-align: center;
+    }
+
+    ul {
+        padding: 5px;
+
+        li {
+            display: list-item;
+            list-style-type: none;
+            font-size: $font-size;
+            font-weight: $font-weight;
+            margin: 2% auto;
+        }
+    }
+}
+
+.hashtags {
+    margin-top: 20px;
+    font-size: $font-size*1.1;
+    overflow: hidden;
+}
+
+.formularioContacto label {
+    display: inline-block;
+}
+
+.anchoTotal {
+    width: 100%;
+}
+
+.imagenPost {
+    display: block;
+}
+
+.btnColor {
+    border-radius: 10px;
+    background-color: $color-fondo-2;
+    color: $color-basico-1;
+    font-weight: $font-weight+200;
+}
+
+//Las siguientes dos clases son las que permiten 
+//que los iFrame tengan un mejor responsive
+.contenedorMedia {
+    position: relative;
+    @include wh-dif(100%, 0);
+    @include armadoAspectRatio(16,9);        
+}
+
+.contenedorMediaOT{
+    @extend .contenedorMedia;
+    @include armadoAspectRatio(16,4);    
+    height: 200px;
+}
+
+.media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include wh-eq(100%);
+}

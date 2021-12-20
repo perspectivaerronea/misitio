@@ -1,0 +1,83 @@
+/* BOOTSTRAP */
+
+
+.navColor,
+.dropdown-menu {
+    background-color: $color-principal;
+}
+
+.navbar {
+
+    a,
+    &-brand,
+    &-nav .nav-item .nav-link,
+    &-light,
+    &-brand,
+    .nav-link,
+    .navItemColor {
+        color: $color-nav-1;
+    }
+}
+
+
+.carousel {
+    &-inner {
+        margin: 0 auto;
+        @include max-wh-eq(65%);
+    }
+
+    &-caption {        
+        border-radius: 20px;
+        background-color: $color-principal;
+        padding: 5px auto;
+        margin: 15px;
+
+        a {
+            padding: 0;
+        }
+
+        h5,
+        p {
+            color: $color-basico-1;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    &-control-prev-icon,
+    &-control-next-icon {
+        @include wh-eq(8rem);
+    }
+}
+
+.accordion {
+    margin-right: 20%;
+    margin-left: 5%;
+
+    &-button,
+    &-item {
+        background-color: $color-nav-1;
+    }
+
+    &-item article img {
+        @include wh-eq(50%);
+        margin: 0 auto;
+    }
+}
+
+.toast {
+
+    background-color: $color-toast;
+
+    &-header {
+       @extend .toast;
+    }
+
+    &-header img {
+        width: 10%;
+    }
+
+    &-body a {
+        margin: 0 auto;
+    }
+}
