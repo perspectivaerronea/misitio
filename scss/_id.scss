@@ -10,20 +10,20 @@ ID
     margin-bottom: 10px;
 }
 
-#newsletter {
-    width: 90%;
-    padding: 15px;
-    @include armarBorde(solid, 2px, $color-basico-2, 19px, $color-principal);
-    color: $color-basico-1;
-    text-align: center;
+// #newsletter {
+//     width: 90%;
+//     padding: 15px;
+//     @include armarBorde(solid, 2px, $color-basico-2, 19px, $color-principal);
+//     color: $color-basico-1;
+//     text-align: center;
 
-    p {
-        width: 100%;
-        margin: 0 auto;
-        display: inline-block;
-        vertical-align: middle;
-    }   
-}
+//     p {
+//         width: 100%;
+//         margin: 0 auto;
+//         display: inline-block;
+//         vertical-align: middle;
+//     }   
+// }
 
 #redes {
     justify-self: flex-end;

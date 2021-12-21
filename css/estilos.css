@@ -114,6 +114,22 @@ CLASES
   color: white;
   font-weight: 900; }
 
+.bordeRecuadroEspecial {
+  width: 90%;
+  padding: 15px;
+  border: solid 2px black;
+  border-radius: 19px;
+  background-color: #105652;
+  color: white;
+  text-align: center; }
+  .bordeRecuadroEspecial p {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle; }
+  .bordeRecuadroEspecial small {
+    color: white; }
+
 .contenedorMedia, .contenedorMediaOT {
   position: relative;
   width: 100%;
@@ -196,20 +212,6 @@ ID
 
 #podcast {
   margin-bottom: 10px; }
-
-#newsletter {
-  width: 90%;
-  padding: 15px;
-  border: solid 2px black;
-  border-radius: 19px;
-  background-color: #105652;
-  color: white;
-  text-align: center; }
-  #newsletter p {
-    width: 100%;
-    margin: 0 auto;
-    display: inline-block;
-    vertical-align: middle; }
 
 #redes {
   justify-self: flex-end; }
