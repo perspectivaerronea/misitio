@@ -3,11 +3,11 @@ html {
 
 body {
   margin: 0px;
-  background-color: #e0e0e0;
+  background-color: var(--color-fondo);
   font-family: "Korolev", sans-serif, monospace;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #105652; }
+  color: var(--color-fuente); }
 
 main,
 section {
@@ -26,7 +26,7 @@ footer img {
 
 a {
   text-decoration: none;
-  color: #105652;
+  color: var(--color-fuente);
   margin: 0;
   padding: 5px; }
 
@@ -46,11 +46,33 @@ iframe {
 hr {
   height: 4px;
   border-width: 0;
-  background-color: #105652; }
+  background-color: var(--color-principal); }
 
 /*
 CLASES
 */
+.theme-light {
+  --color-fondo: #e0e0e0;
+  --color-principal: #105652;
+  --color-fondo-2: #ff370f;
+  --color-hover: #7700FF;
+  --color-basico-1: white;
+  --color-basico-2: black;
+  --color-nav-1: #f8f9fa;
+  --color-toast: #E0E0E0;
+  --color-fuente: #105652; }
+
+.theme-dark {
+  --color-fondo: #2C394B;
+  --color-principal: #082032;
+  --color-fondo-2: #FF4C29;
+  --color-hover: #7700FF;
+  --color-basico-1: white;
+  --color-basico-2: black;
+  --color-nav-1: #f8f9fa;
+  --color-toast: #E0E0E0;
+  --color-fuente: #e0e0e0; }
+
 .contenedorArriba {
   position: fixed;
   bottom: 40%;
@@ -78,9 +100,9 @@ CLASES
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 1%;
-  border: solid 2px #105652;
+  border: solid 2px var(--color-principal);
   border-radius: 0px;
-  background-color: #e0e0e0;
+  background-color: var(--color-fondo);
   z-index: 10; }
   .posteos h6 {
     margin: 2% auto;
@@ -110,17 +132,17 @@ CLASES
 
 .btnColor {
   border-radius: 10px;
-  background-color: #ff370f;
-  color: white;
+  background-color: var(--color-fondo-2);
+  color: var(--color-basico-1);
   font-weight: 900; }
 
 .bordeRecuadroEspecial {
   width: 90%;
   padding: 15px;
-  border: solid 2px black;
+  border: solid 2px var(--color-basico-2);
   border-radius: 19px;
-  background-color: #105652;
-  color: white;
+  background-color: var(--color-principal);
+  color: var(--color-basico-1);
   text-align: center; }
   .bordeRecuadroEspecial p {
     width: 100%;
@@ -128,7 +150,7 @@ CLASES
     display: inline-block;
     vertical-align: middle; }
   .bordeRecuadroEspecial small {
-    color: white; }
+    color: var(--color-basico-1); }
 
 .contenedorMedia, .contenedorMediaOT {
   position: relative;
@@ -151,11 +173,11 @@ CLASES
 TRANSFORMACIONES & ANIMACIONES
 */
 .navAnim:hover {
-  color: #105652;
+  color: var(--color-principal);
   transform: scale(1.08); }
 
 .hashtags a:hover {
-  color: #7700FF;
+  color: var(--color-hover);
   transform: scale(1.2); }
 
 .hashtagsMarquesina {
@@ -230,13 +252,13 @@ ID
 /* BOOTSTRAP */
 .navColor,
 .dropdown-menu {
-  background-color: #105652; }
+  background-color: var(--color-principal); }
 
 .navbar a, .navbar-brand,
 .navbar-nav .nav-item .nav-link, .navbar-light, .navbar-brand,
 .navbar .nav-link,
 .navbar .navItemColor {
-  color: #f8f9fa; }
+  color: var(--color-nav-1); }
 
 .carousel-inner {
   margin: 0 auto;
@@ -245,14 +267,14 @@ ID
 
 .carousel-caption {
   border-radius: 20px;
-  background-color: #105652;
+  background-color: var(--color-principal);
   padding: 5px auto;
   margin: 15px; }
   .carousel-caption a {
     padding: 0; }
   .carousel-caption h5,
   .carousel-caption p {
-    color: white;
+    color: var(--color-basico-1);
     padding: 0;
     margin: 0; }
 
@@ -263,15 +285,18 @@ ID
 .accordion {
   margin-right: 20%;
   margin-left: 5%; }
-  .accordion-button, .accordion-item {
-    background-color: #f8f9fa; }
+  .accordion-button, .accordion-collapse {
+    background-color: var(--color-fondo);
+    color: var(--color-fuente); }
+  .accordion-item {
+    background-color: var(--color-nav-1); }
   .accordion-item article img {
     width: 50%;
     height: 50%;
     margin: 0 auto; }
 
 .toast, .toast-header {
-  background-color: #E0E0E0; }
+  background-color: var(--color-toast); }
   .toast-header img {
     width: 10%; }
   .toast-body a {

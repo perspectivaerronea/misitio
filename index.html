@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="theme-light">
 
 <head>
     <meta charset="UTF-8">
@@ -29,32 +29,37 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-0 mb-2 mb-lg-0 ms-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle navItemColor" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Inicio
-                            </a>
-                            <ul class="dropdown-menu ms-auto" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Inicio</a></li>
-                                <li><a class="dropdown-item" href="#perspectivas">Preview Perspectivas</a></li>
-                                <li><a class="dropdown-item" href="#galeria">Galeria</a></li>
-                                <li><a class="dropdown-item" href="#podcast">Podcast</a></li>
+
+                <label id="switch" class="switch">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round">
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-0 mb-2 mb-lg-0 ms-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle navItemColor" href="#" id="navbarDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Inicio
+                                    </a>
+                                    <ul class="dropdown-menu ms-auto" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Inicio</a></li>
+                                        <li><a class="dropdown-item" href="#perspectivas">Preview Perspectivas</a></li>
+                                        <li><a class="dropdown-item" href="#galeria">Galeria</a></li>
+                                        <li><a class="dropdown-item" href="#podcast">Podcast</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/perspectivas.html">Perspectivas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva
+                                        Errónea?</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                                </li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/perspectivas.html">Perspectivas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva
-                                Errónea?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
             </div>
         </nav>
 
@@ -78,7 +83,7 @@
             </div>
         </article>
     </main>
-    <section id="perspectivas" class= "h-100">
+    <section id="perspectivas" class="h-100">
         <article>
             <hr>
             <h2>Preview Perspectivas</h2>
@@ -127,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col">
                     <div class="card bordeRecuadroEspecial">
                         <img src="./images/post/aerosmith1.jpg" class="card-img-top" alt="Portada Album Pump">
@@ -144,7 +149,8 @@
                 </div>
                 <div class="col">
                     <div class="card bordeRecuadroEspecial">
-                        <img src="./images/post/nft1.jpg" class="card-img-top" alt="Cuadro descripción nft fungible y no fungible">
+                        <img src="./images/post/nft1.jpg" class="card-img-top"
+                            alt="Cuadro descripción nft fungible y no fungible">
                         <div class="card-body">
                             <h5 class="card-title">NFT - ¡Comprame el JPG!</h5>
                             <p class="card-text">Mini Articulo hablando de lo básico para entender que es, y como
@@ -374,6 +380,9 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
         integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
         async></script>
+
+    <!-- SCRIPT - Suma funcionalidades necesarias -->
+    <script type='text/javascript' src='../js/code.js'></script>
 </body>
 
 </html>

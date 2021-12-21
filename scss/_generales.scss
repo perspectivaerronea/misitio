@@ -6,7 +6,7 @@ html {
 
 body {
     margin: 0px;
-    background-color: $color-fondo;
+    background-color: var(--color-fondo);
     @include formatoTexto;
 }
 
@@ -32,7 +32,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: $color-principal;
+    color: var(--color-fuente);
     margin: 0;
     padding: 5px;
 }
@@ -55,5 +55,5 @@ iframe {
 hr {
     height: 4px;
     border-width: 0;
-    background-color: $color-principal;
+    background-color: var(--color-principal);
 }

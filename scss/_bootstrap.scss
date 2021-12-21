@@ -3,7 +3,7 @@
 
 .navColor,
 .dropdown-menu {
-    background-color: $color-principal;
+    background-color: var(--color-principal);
 }
 
 .navbar {
@@ -15,7 +15,7 @@
     &-brand,
     .nav-link,
     .navItemColor {
-        color: $color-nav-1;
+        color: var(--color-nav-1);
     }
 }
 
@@ -26,9 +26,9 @@
         @include max-wh-eq(65%);
     }
 
-    &-caption {        
+    &-caption {
         border-radius: 20px;
-        background-color: $color-principal;
+        background-color: var(--color-principal);
         padding: 5px auto;
         margin: 15px;
 
@@ -38,7 +38,7 @@
 
         h5,
         p {
-            color: $color-basico-1;
+            color: var(--color-basico-1);
             padding: 0;
             margin: 0;
         }
@@ -54,9 +54,14 @@
     margin-right: 20%;
     margin-left: 5%;
 
-    &-button,
+    &-button, &-collapse{
+        background-color: var(--color-fondo);      
+        color: var(--color-fuente);
+    }
+
+    // &-button,
     &-item {
-        background-color: $color-nav-1;
+        background-color: var(--color-nav-1);
     }
 
     &-item article img {
@@ -67,10 +72,10 @@
 
 .toast {
 
-    background-color: $color-toast;
+    background-color: var(--color-toast);
 
     &-header {
-       @extend .toast;
+        @extend .toast;
     }
 
     &-header img {

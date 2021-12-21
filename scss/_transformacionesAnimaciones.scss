@@ -4,11 +4,11 @@ TRANSFORMACIONES & ANIMACIONES
 */
 
 .navAnim:hover {
-    @include modHover($color-principal, 1.08);
+    @include modHover(var(--color-principal), 1.08);
 }
 
 .hashtags a:hover {
-    @include modHover($color-hover, 1.2);
+    @include modHover(var(--color-hover), 1.2);
 }
 
 .hashtagsMarquesina {

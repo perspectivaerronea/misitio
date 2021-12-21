@@ -2,6 +2,29 @@
 CLASES
 */
 
+.theme-light {
+    --color-fondo: #{$color-fondo-L};
+    --color-principal: #{$color-principal-L};
+    --color-fondo-2: #{$color-fondo-2-L};
+    --color-hover: #{$color-hover};
+    --color-basico-1: #{$color-basico-1};
+    --color-basico-2: #{$color-basico-2};
+    --color-nav-1: #{$color-nav-1};
+    --color-toast: #{$color-toast};
+    --color-fuente: #{$color-fuente-L};
+}
+
+.theme-dark {
+    --color-fondo: #{$color-fondo-D};
+    --color-principal: #{$color-principal-D};
+    --color-fondo-2: #{$color-fondo-2-D};
+    --color-hover: #{$color-hover};
+    --color-basico-1: #{$color-basico-1};
+    --color-basico-2: #{$color-basico-2};
+    --color-nav-1: #{$color-nav-1};
+    --color-toast: #{$color-toast};
+    --color-fuente: #{$color-fuente-D};
+}
 
 .contenedorArriba {
     position: fixed;
@@ -36,7 +59,7 @@ CLASES
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 1%;
-    @include armarBorde(solid, 2px, $color-principal, 0px, $color-fondo);
+    @include armarBorde(solid, 2px, var(--color-principal), 0px, var(--color-fondo));
     z-index: 10;
 
     h6 {
@@ -77,16 +100,16 @@ CLASES
 
 .btnColor {
     border-radius: 10px;
-    background-color: $color-fondo-2;
-    color: $color-basico-1;
+    background-color: var(--color-fondo-2);
+    color: var(--color-basico-1);
     font-weight: $font-weight+200;
 }
 
 .bordeRecuadroEspecial {
     width: 90%;
     padding: 15px;
-    @include armarBorde(solid, 2px, $color-basico-2, 19px, $color-principal);
-    color: $color-basico-1;
+    @include armarBorde(solid, 2px, var(--color-basico-2), 19px, var(--color-principal));
+    color: var(--color-basico-1);
     text-align: center;
 
     p {
@@ -97,7 +120,7 @@ CLASES
     }
 
     small {
-        color: $color-basico-1;
+        color: var(--color-basico-1);
     }
 }
 
@@ -121,3 +144,4 @@ CLASES
     left: 0;
     @include wh-eq(100%);
 }
+
