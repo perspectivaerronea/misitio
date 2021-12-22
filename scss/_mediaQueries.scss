@@ -95,5 +95,15 @@
     .accordion-item article img {
         @include wh-eq(100%);
         margin: 0;
+    }    
+}
+
+@media(max-width: 413) {
+    .bordeRecuadroEspecial {
+        margin: 0 auto;
+    }
+
+    .btnColor{
+        margin-top: 2px;
     }
 }
