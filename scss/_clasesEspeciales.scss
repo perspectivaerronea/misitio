@@ -13,12 +13,12 @@ CLASES
     --color-toast: #{$color-toast};
     --color-fuente: #{$color-fuente-L};
     --arriba: url('../images/misc/home.svg');
-    --social-correo:  url('../images/social/mail.svg');
+    --social-correo: url('../images/social/mail.svg');
     --social-youtube: url('../images/social/youtube.svg');
     --social-spotify: url('../images/social/spotify.svg');
     --social-soundcloud: url('../images/social/soundcloud.svg');
     --social-instagram: url('../images/social/instagram.svg');
-    --social-twitter: url('../images/social/twitter.svg');        
+    --social-twitter: url('../images/social/twitter.svg');
 }
 
 .theme-dark {
@@ -32,12 +32,12 @@ CLASES
     --color-toast: #{$color-toast};
     --color-fuente: #{$color-fuente-D};
     --arriba: url('../images/misc/home_d.svg');
-    --social-correo:  url('../images/social/mail_d.svg');
+    --social-correo: url('../images/social/mail_d.svg');
     --social-youtube: url('../images/social/youtube_d.svg');
     --social-spotify: url('../images/social/spotify_d.svg');
     --social-soundcloud: url('../images/social/soundcloud_d.svg');
     --social-instagram: url('../images/social/instagram_d.svg');
-    --social-twitter: url('../images/social/twitter_d.svg');        
+    --social-twitter: url('../images/social/twitter_d.svg');
 }
 
 .contenedorArriba {
@@ -55,8 +55,8 @@ CLASES
     }
 }
 
-.contenedorTema {  
-    display: inline-block;  
+.contenedorTema {
+    display: inline-block;
     margin: 0 auto;
 }
 
@@ -107,7 +107,7 @@ CLASES
 
 .tituloPosteo {
     font-weight: $font-weight+200;
-} 
+}
 
 .formularioContacto label {
     display: inline-block;
@@ -168,71 +168,70 @@ CLASES
     @include wh-eq(100%);
 }
 
-/* The switch - the box around the slider */
+/* Definición del tamaño de la caja para el deslizador */
 .switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    // cursor: pointer;
+
+    // Oculta el cuadro de checkbox
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+/* Deslizador */
+.slider {
+    position: absolute;    
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--color-fondo);
     -webkit-transition: 0.4s;
     transition: 0.4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 40px;
-    width: 40px;
-    left: 0px;
-    bottom: 4px;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;    
-    transition: 0.4s;
-    box-shadow: 0 0px 15px #2020203d;
-    background: white url('../images/misc/night.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  input:checked + .slider {
-    background-color: var(--color-fondo);
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px var(--color-fondo);
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(24px);
-    background: var(--color-basico-1) url('../images/misc/sunny.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: 40px;
+        width: 40px;
+        left: 0px;
+        bottom: 4px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        transition: 0.4s;
+        box-shadow: 0 0px 15px #2020203d;
+        background: var(--color-basico-1) url('../images/misc/night.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    input:checked+& {
+        background-color: var(--color-fondo);
+    }
+
+    input:focus+& {
+        box-shadow: 0 0 1px var(--color-fondo);
+    }
+
+    input:checked+&:before {
+        transform: translateX(24px);
+        background: var(--color-basico-1) url('../images/misc/sunny.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /* Borde Redondeado */
+    &.round {
+        border-radius: 34px;
+
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}
