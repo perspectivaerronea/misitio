@@ -1,7 +1,7 @@
 /* MEDIA QUERIES */
 @media(min-width: 1201px) {
-    html{                
-        height: 100%;        
+    html {
+        height: 100%;
     }
 }
 
@@ -95,7 +95,7 @@
     .accordion-item article img {
         @include wh-eq(100%);
         margin: 0;
-    }    
+    }
 }
 
 @media(max-width: 413) {
@@ -103,7 +103,7 @@
         margin: 0 auto;
     }
 
-    .btnColor{
+    .btnColor {
         margin-top: 2px;
     }
 }
