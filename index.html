@@ -24,42 +24,46 @@
         <nav class="navbar navbar-expand-lg navbar-light navColor">
             <div class="container-fluid">
                 <h1><a class="navbar-brand navItemColor" href="#">PERSPECTIVA ERRÓNEA</a></h1>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <label id="switch" class="switch">
-                    <input type="checkbox" onchange="toggleTheme()" id="slider">
-                    <span class="slider round">
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-0 mb-2 mb-lg-0 ms-auto">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle navItemColor" href="#" id="navbarDropdown"
-                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Inicio
-                                    </a>
-                                    <ul class="dropdown-menu ms-auto" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">Inicio</a></li>
-                                        <li><a class="dropdown-item" href="#perspectivas">Preview Perspectivas</a></li>
-                                        <li><a class="dropdown-item" href="#galeria">Galeria</a></li>
-                                        <li><a class="dropdown-item" href="#podcast">Podcast</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./pages/perspectivas.html">Perspectivas</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva
-                                        Errónea?</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-                                </li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-0 mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle navItemColor" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Inicio
+                            </a>
+                            <ul class="dropdown-menu ms-auto" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Inicio</a></li>
+                                <li><a class="dropdown-item" href="#perspectivas">Preview Perspectivas</a></li>
+                                <li><a class="dropdown-item" href="#galeria">Galeria</a></li>
+                                <li><a class="dropdown-item" href="#podcast">Podcast</a></li>
                             </ul>
-                        </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/perspectivas.html">Perspectivas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva
+                                Errónea?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item ms-auto">
+                            <div class="contenedorTema">
+                                <label id="switch" class="switch">
+                                    <input type="checkbox" onchange="cambiaTema()" id="slider">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -96,7 +100,7 @@
                             <p class="card-text">Investigación, opinión, seriedad, joda, cantitos de cancha, la música
                                 en la dictadura, las canciones que nos vuelan la cabeza, el arte digital, la psicología
                                 del rock y más.</p>
-                            <a href="./pages/perspectivas.html#collapseLast" class="btn btnColor">Ver más...</a>
+                            <a href="./pages/perspectivas.html#collapse-last" class="btn btnColor">Ver más...</a>
                         </div>
                         <div class="card-footer">
                             <small>07/12/2021</small>
@@ -110,7 +114,7 @@
                             <h5 class="card-title">¿NFT?¿Eso con qué se come?</h5>
                             <p class="card-text">Una pequeña introducción al Critoarte, una conversación con el
                                 productor y DJ Tibau Mascheroni.</p>
-                            <a href="./pages/perspectivas.html#collapseOne" class="btn btnColor">Ver más...</a>
+                            <a href="./pages/perspectivas.html#collapse-five" class="btn btnColor">Ver más...</a>
                         </div>
                         <div class="card-footer">
                             <small">26/11/2021</small>
@@ -125,7 +129,7 @@
                             <p class="card-text">En este episodio nos pusimos a investigar y pensar sobre canciones
                                 prohibídas o emblemáticas
                                 de las dictaduras en la región.</p>
-                            <a href="./pages/perspectivas.html#collapseTwo" class="btn btnColor">Ver más...</a>
+                            <a href="./pages/perspectivas.html#collapse-four" class="btn btnColor">Ver más...</a>
                         </div>
                         <div class="card-footer">
                             <small>03/11/2021</small>
@@ -140,7 +144,7 @@
                             <h5 class="card-title">“No está a la altura de Pump” ... ¡Lo superó!</h5>
                             <p class="card-text">Un análisis del 11vo disco de estudio de Aerosmith y su trascendencia
                                 llegando 19 años de su lanzamiento.</p>
-                            <a href="./pages/perspectivas.html#collapseThree" class="btn btnColor">Ver más...</a>
+                            <a href="./pages/perspectivas.html#collapse-three" class="btn btnColor">Ver más...</a>
                         </div>
                         <div class="card-footer">
                             <small>26/10/2021</small>
@@ -155,7 +159,7 @@
                             <h5 class="card-title">NFT - ¡Comprame el JPG!</h5>
                             <p class="card-text">Mini Articulo hablando de lo básico para entender que es, y como
                                 funciona, un NFT.</p>
-                            <a href="./pages/perspectivas.html#collapseFive" class="btn btnColor">Ver más...</a>
+                            <a href="./pages/perspectivas.html#collapse-one" class="btn btnColor">Ver más...</a>
                         </div>
                         <div class="card-footer">
                             <small>10/03/2021</small>
@@ -168,7 +172,7 @@
                         <div class="card-body">
                             <h5 class="card-title">"Comenzaron los disturbios en la fiesta Prohibida"</h5>
                             <p class="card-text">¿Es el lenguaje de algunas cumbias el nuevo lunfardo? </p>
-                            <a href="./pages/perspectivas.html#collapseFour" class="btn btnColor">Ver más...</a>
+                            <a href="./pages/perspectivas.html#collapse-two" class="btn btnColor">Ver más...</a>
                         </div>
                         <div class="card-footer">
                             <small>12/10/2021</small>
@@ -327,8 +331,14 @@
             </form>
         </article>
     </section>
+    <!-- <div class="contenedorTema">
+        <label id="switch" class="switch">
+            <input type="checkbox" onchange="cambiaTema()" id="slider" checked>
+            <span class="slider round"></span>
+        </label>        
+    </div> -->
     <div class="contenedorArriba">
-        <a id="arriba" href="#top"><img src="./images/misc/home.png" alt="Volver al principio de la página"></a>
+        <a href="#top"><img id="arriba" alt="Volver al principio de la página"></a>
     </div>
     <footer>
         <hr>
@@ -339,8 +349,7 @@
                     <section id="correoContacto" class="enLinea">
                         <h5>Contacto</h5>
                         <div class="flex">
-                            <a href="#"><img src="./images/social/mail.png" alt="correo electronico"
-                                    id="logoCorreo"></a>
+                            <a href="#"><img id="social-correo" alt="correo electronico"></a>
                             <a href="#">info@perspectivaerronea.com</a>
                         </div>
                     </section>
@@ -350,14 +359,14 @@
                         <h5>Nuestras Redes</h5>
                         <div class="flex">
                             <a href="https://www.youtube.com/channel/UCFo_0IP6qDqzvoY8tlY7BqQ?sub_confirmation=1">
-                                <img src="./images/social/youtube.png" alt="Sucribite al Canal de Youtube"></a>
-                            <a href="https://open.spotify.com/show/72ZcZ0Csbau1TWOndLZYbx?si=e11cacf5ccb442b0"><img
-                                    src="./images/social/spotify.png" alt="Seguí el podcast en Spotify"></a>
-                            <a href="https://soundcloud.com/perspectivaerronea/tracks"><img
-                                    src="./images/social/soundcloud.png" alt="Seguime en soundcloud"></a>
-                            <a href="https://www.instagram.com/perspectivaerronea/"><img
-                                    src="./images/social/instagram.png" alt="Seguime en Instagram"></a>
-                            <a href="https://twitter.com/persperronea"><img src="./images/social/twitter.png"
+                                <img id="social-youtube" alt="Sucribite al Canal de Youtube"></a>
+                            <a href="https://open.spotify.com/show/72ZcZ0Csbau1TWOndLZYbx?si=e11cacf5ccb442b0">
+                                <img id="social-spotify" alt="Seguí el podcast en Spotify"></a>
+                            <a href="https://soundcloud.com/perspectivaerronea/tracks">
+                                <img id="social-soundcloud" alt="Seguime en soundcloud"></a>
+                            <a href="https://www.instagram.com/perspectivaerronea/">
+                                <img id="social-instagram" alt="Seguime en Instagram"></a>
+                            <a href="https://twitter.com/persperronea"><img id="social-twitter"
                                     alt="Seguime en Twitter"></a>
                         </div>
                     </section>

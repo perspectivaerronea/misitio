@@ -2,9 +2,9 @@
 ID
 */
 
-#logoCorreo {
-    vertical-align: middle;
-}
+// #logoCorreo {
+//     vertical-align: middle;
+// }
 
 #podcast {
     margin-bottom: 10px;
@@ -27,3 +27,18 @@ ID
 #correoContacto .flex {
     justify-content: start;
 }
+
+#arriba {
+    content: var(--arriba);
+    @include max-wh-eq(80%);
+}
+
+@each $id, $red in $listaRedes{
+    #social-#{$red}{
+        content: var(--social-#{$red});
+        @include max-wh-eq(40px);
+    }
+}
+
+
+

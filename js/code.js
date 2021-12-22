@@ -1,31 +1,41 @@
 //
 // FUNCIONES
 //
- // function to set a given theme/color-scheme
- function setTheme(themeName) {
+// function to set a given theme/color-scheme
+function setTema(themeName) {
     localStorage.setItem('theme', themeName);
     document.documentElement.className = themeName;
 }
 
 // function to toggle between light and dark theme
-function toggleTheme() {
+function cambiaTema() {
     if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-light');
+        setTema('theme-light');
     } else {
-        setTheme('theme-dark');
+        setTema('theme-dark');
     }
 }
 
-// abrirAcordEon
+// abrirAcordeon
 // recibe el hashtag que vino en la url sin el "#" para poder buscarlo en el html y sumarle la clase "show" para visualizar el articulo seleccionado en el index.
 function abrirAcordeon(elemento) {
+
     var elemID = document.getElementById(elemento);
     elemID.classList.add("show");
+
+    //construye el nombre de la cabecera del acordeón para que se vea como cuando se hace el clic. 
+    var fullname = elemento;
+    var subfix = fullname.split("-").pop();
+    
+    var heading = "head-bt-" + subfix;
+    
+    var elemID = document.getElementById(heading);
+    elemID.classList.remove("collapsed");    
 }
 
-// load
+// carga
 // toma el hashtag de la url, luego evalua si tiene valor o no y en base a eso determina que enviar a la función "abrirAcordeon"
-function load() {
+function carga() {
 
     if (window.location.hash) {
 
@@ -34,23 +44,33 @@ function load() {
 
         abrirAcordeon(elemento);
     } else {
-        abrirAcordeon('collapseLast');
+        abrirAcordeon('collapse-last');
     }
 }
 
-function cargaTema(){
+// cargaTema
+// esta función revisa que tema está cargado y en base a eso define el estado del slider del tema, más allá de definir el tema para la página.
+function cargaTema() {
     if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-dark');
+        setTema('theme-dark');
         document.getElementById('slider').checked = false;
     } else {
-        setTheme('theme-light');
-      document.getElementById('slider').checked = true;
+        setTema('theme-light');
+        document.getElementById('slider').checked = true;
     }
 }
 
 //
 // PROGRAMA PRINCIPAL
 //
-window.addEventListener('DOMContentLoaded', load);
+
+//Obtiene nombre html
+var path = window.location.pathname;
+var page = path.split("/").pop();
+
+
+if (page == "perspectivas.html") {
+    window.addEventListener('DOMContentLoaded', carga);
+}
+
 window.addEventListener('DOMContentLoaded', cargaTema);
-// window.addEventListener('DOMContentLoaded', cargaTema);

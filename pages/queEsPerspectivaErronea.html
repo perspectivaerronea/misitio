@@ -52,6 +52,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./contacto.html">Contacto</a>
                         </li>
+                        <li class="nav-item ms-auto">
+                            <div class="contenedorTema">
+                                <label id="switch" class="switch">
+                                    <input type="checkbox" onchange="cambiaTema()" id="slider">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -128,7 +136,7 @@
     <div class="toast-container position-absolute top-50 end-0 translate-middle-y">
         <div class="toast show popup1000" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header ">
-                <img src="../images/social/youtube.png" class="rounded me-2" alt="Canal de Youtube">
+                <img src="../images/social/youtube_fc.svg" class="rounded me-2" alt="Canal de Youtube">
                 <strong class="me-auto">¿Conocés el canal de Youtube?</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
@@ -139,7 +147,7 @@
         </div>
         <div class="toast show popup3000" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header ">
-                <img src="../images/social/instagram.png" class="rounded me-2" alt="Canal de Instagram">
+                <img src="../images/social/instagram_fc.svg" class="rounded me-2" alt="Canal de Instagram">
                 <strong class="me-auto">¿Y me seguís en instagram?</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
@@ -150,7 +158,7 @@
         </div>
         <div class="toast show popup5000" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header ">
-                <img src="../images/social/spotify.png" class="rounded me-2" alt="Podcast en Spotify">
+                <img src="../images/social/spotify_fc.svg" class="rounded me-2" alt="Podcast en Spotify">
                 <strong class="me-auto">¿Escuchaste el podcast en Spotify?</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
@@ -169,8 +177,7 @@
                     <section id="correoContacto" class="enLinea">
                         <h5>Contacto</h5>
                         <div class="flex">
-                            <a href="#"><img src="../images/social/mail.png" alt="correo electronico"
-                                    id="logoCorreo"></a>
+                            <a href="#"><img id="social-correo" alt="correo electronico"></a>
                             <a href="#">info@perspectivaerronea.com</a>
                         </div>
                     </section>
@@ -179,15 +186,15 @@
                     <section>
                         <h5>Nuestras Redes</h5>
                         <div class="flex">
-                            <a href="https://www.youtube.com/channel/UCFo_0IP6qDqzvoY8tlY7BqQ?sub_confirmation=1">
-                                <img src="../images/social/youtube.png" alt="Sucribite al Canal de Youtube"></a>
-                            <a href="https://open.spotify.com/show/72ZcZ0Csbau1TWOndLZYbx?si=e11cacf5ccb442b0"><img
-                                    src="../images/social/spotify.png" alt="Seguí el podcast en Spotify"></a>
-                            <a href="https://soundcloud.com/perspectivaerronea/tracks"><img
-                                    src="../images/social/soundcloud.png" alt="Seguime en soundcloud"></a>
-                            <a href="https://www.instagram.com/perspectivaerronea/"><img
-                                    src="../images/social/instagram.png" alt="Seguime en Instagram"></a>
-                            <a href="https://twitter.com/persperronea"><img src="../images/social/twitter.png"
+                            <a href="https://www.youtube.com/channel/UCFo_0IP6qDqzvoY8tlY7BqQ?sub_confirmation=1">                                
+                                <img id="social-youtube" alt="Sucribite al Canal de Youtube"></a>
+                            <a href="https://open.spotify.com/show/72ZcZ0Csbau1TWOndLZYbx?si=e11cacf5ccb442b0">
+                                <img id="social-spotify" alt="Seguí el podcast en Spotify"></a>
+                            <a href="https://soundcloud.com/perspectivaerronea/tracks">
+                                <img id="social-soundcloud" alt="Seguime en soundcloud"></a>
+                            <a href="https://www.instagram.com/perspectivaerronea/">
+                                <img id="social-instagram" alt="Seguime en Instagram"></a>
+                            <a href="https://twitter.com/persperronea"><img id="social-twitter"
                                     alt="Seguime en Twitter"></a>
                         </div>
                     </section>

@@ -11,7 +11,7 @@
         left: 90%;
 
         img {
-            @include wh-eq(80%);
+            @include max-wh-eq(80%);
         }
     }
 
