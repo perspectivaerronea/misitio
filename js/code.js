@@ -1,13 +1,13 @@
 //
 // FUNCIONES
 //
-// function to set a given theme/color-scheme
+// Esta función se usa para asignar el tema que va a usarse.
 function setTema(themeName) {
     localStorage.setItem('theme', themeName);
     document.documentElement.className = themeName;
 }
 
-// function to toggle between light and dark theme
+// Esta función permite intercambiar entre el tema diurno y el nocturno.
 function cambiaTema() {
     if (localStorage.getItem('theme') === 'theme-dark') {
         setTema('theme-light');
@@ -33,9 +33,9 @@ function abrirAcordeon(elemento) {
     elemID.classList.remove("collapsed");    
 }
 
-// carga
+// cargaArticulo
 // toma el hashtag de la url, luego evalua si tiene valor o no y en base a eso determina que enviar a la función "abrirAcordeon"
-function carga() {
+function cargaArticulo() {
 
     if (window.location.hash) {
 
@@ -68,9 +68,10 @@ function cargaTema() {
 var path = window.location.pathname;
 var page = path.split("/").pop();
 
-
+//Este código previene que se ejecute este código en las páginas donde no es necesario.
 if (page == "perspectivas.html") {
-    window.addEventListener('DOMContentLoaded', carga);
+    window.addEventListener('DOMContentLoaded', cargaArticulo);
 }
 
+//Dispara la función para cargar el tema
 window.addEventListener('DOMContentLoaded', cargaTema);
