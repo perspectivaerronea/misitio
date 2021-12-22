@@ -459,15 +459,7 @@ ID
   .newsletter input[type=email] {
     margin-bottom: 10px; }
   #newsletter p {
-    display: none; } }
-
-@media (max-width: 768) {
-  .accordion-item article img {
-    width: 100%;
-    height: 100%;
-    margin: 0; } }
-
-@media (max-width: 413) {
+    display: none; }
   .bordeRecuadroEspecial {
     margin: 0 auto; }
   .btnColor {

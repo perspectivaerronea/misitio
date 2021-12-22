@@ -89,16 +89,7 @@
     #newsletter p {
         display: none;
     }
-}
 
-@media(max-width: 768) {
-    .accordion-item article img {
-        @include wh-eq(100%);
-        margin: 0;
-    }
-}
-
-@media(max-width: 413) {
     .bordeRecuadroEspecial {
         margin: 0 auto;
     }
@@ -106,4 +97,5 @@
     .btnColor {
         margin-top: 5px;
     }
+
 }
