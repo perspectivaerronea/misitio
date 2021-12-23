@@ -94,8 +94,7 @@ function setColapsar(elemento) {
 // Esta función permite que la guía de posteos abra el item del acordeon que corresponde y se mueva hacía el mismo 
 // para dar dinamismo a la página.
 function scrollArticulo(hashtag) {
-    var elemento = hashtag.substring(1, hashtag.length);
-    alert(elemento);
+    var elemento = hashtag.substring(1, hashtag.length);    
     cerrarAcordeonAbierto();
     abrirAcordeon(elemento);
 }
