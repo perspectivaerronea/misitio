@@ -1,12 +1,15 @@
 //
 // FUNCIONES
 //
+
+// setTema
 // Esta función se usa para asignar el tema que va a usarse.
 function setTema(themeName) {
     localStorage.setItem('theme', themeName);
     document.documentElement.className = themeName;
 }
 
+// cambiaTema
 // Esta función permite intercambiar entre el tema diurno y el nocturno.
 function cambiaTema() {
     if (localStorage.getItem('theme') === 'theme-dark') {
@@ -26,11 +29,12 @@ function abrirAcordeon(elemento) {
     //construye el nombre de la cabecera del acordeón para que se vea como cuando se hace el clic. 
     var fullname = elemento;
     var subfix = fullname.split("-").pop();
-    
+
+
     var heading = "head-bt-" + subfix;
-    
+
     var elemID = document.getElementById(heading);
-    elemID.classList.remove("collapsed");    
+    elemID.classList.remove("collapsed");
 }
 
 // cargaArticulo
@@ -60,6 +64,41 @@ function cargaTema() {
     }
 }
 
+// cerrarAcordeonAbierto
+// Esta funcion cierra todos los items del acordeon.
+function cerrarAcordeonAbierto() {
+    
+    //Arma una lista con todos los elementos que tenga la clase show
+    let x = document.getElementsByClassName("show");
+    // Si hay algún elemento con esta clase se la quita.
+    if (x.length > 0) {
+        x[0].classList.remove("show");
+    }
+    //Este código obtiene todos los button que son los headers de los acordeones y les agrega la clase collapsed
+    var headings = document.querySelectorAll('[id ^= "head-bt-"]');
+    // Con el código anterior se obtiene una lista de elementos que cumplen con la condición de que su ID empieza con 'head-bt-'
+    // Por cada uno de estos llama a la función 'setColapsar'.
+    for (var i = 0; i < headings.length; i++) {        
+        setColapsar(headings[i].id);
+    }    
+}
+
+// setColapsar
+// Esta función le suma la clase 'collapsed' al elemento que se pase como parámetro
+function setColapsar(elemento) {
+    var elemID = document.getElementById(elemento);
+    elemID.classList.add("collapsed");
+}
+
+// scrollArticulo
+// Esta función permite que la guía de posteos abra el item del acordeon que corresponde y se mueva hacía el mismo 
+// para dar dinamismo a la página.
+function scrollArticulo(hashtag) {
+    var elemento = hashtag.substring(1, hashtag.length);
+    cerrarAcordeonAbierto();
+    abrirAcordeon(elemento);
+}
+
 //
 // PROGRAMA PRINCIPAL
 //
@@ -75,3 +114,5 @@ if (page == "perspectivas.html") {
 
 //Dispara la función para cargar el tema
 window.addEventListener('DOMContentLoaded', cargaTema);
+
+

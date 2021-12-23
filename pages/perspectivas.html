@@ -328,7 +328,7 @@
             <div id="collapse-one" class="accordion-collapse collapse" aria-labelledby="heading-one"
                 data-bs-parent="#accordionPosteos">
                 <div class="accordion-body">
-                    <article>
+                    <article id="anterior-one">
                         <hr>
                         <h5>10/03/2021</h5>
                         <h3>NFT - ¡Comprame el JPG!</h3>
@@ -488,20 +488,21 @@
     <div class="posteos">
         <h6>Guía Rápida de Posteos</h6>
         <ul>
-            <li><a href="#collapse-last" data-bs-toggle="collapse" data-bs-target="#collapse-last">Resumen del Año</a>
+            <li><a id="post-last" href="#collapse-last" onclick="scrollArticulo('#collapse-last')">Resumen del Año</a>
             </li>
-            <li><a href="#collapse-five" data-bs-toggle="collapse" data-bs-target="#collapse-five">NFT ¿Eso con qué se
+            <li><a id="post-five" href="#collapse-five" onclick="scrollArticulo('#collapse-five')">NFT ¿Eso con qué se
                     some?</a></li>
-            <li><a href="#collapse-four" data-bs-toggle="collapse" data-bs-target="#collapse-four">Música y Sonido en
+            <li><a id="post-four" href="#collapse-four" onclick="scrollArticulo('#collapse-four')">Música y Sonido en
                     Dictadura</a></li>
-            <li><a href="#collapse-three" data-bs-toggle="collapse" data-bs-target="#collapse-three">“No está a la
+            <li><a id="post-three" href="#collapse-three" onclick="scrollArticulo('#collapse-three')">“No está a la
                     altura de Pump” ... ¡Lo superó!</a></li>
-            <li><a href="#collapse-two" data-bs-toggle="collapse" data-bs-target="#collapse-two">C Pikó la clandestina o
+            <li><a id="post-two" href="#collapse-two" onclick="scrollArticulo('#collapse-two')">C Pikó la clandestina o
                     "Comenzaron los disturbios en la fiesta
                     Prohibida"</a></li>
-            <li><a href="#collapse-one" data-bs-toggle="collapse" data-bs-target="#collapse-one">NFT - ¡Comprame el
+            <li><a id="post-one" href="#collapse-one" onclick="scrollArticulo('#collapse-one')">NFT - ¡Comprame el
                     JPG!</a></li>
         </ul>
+
     </div>
     <footer>
         <hr>
