@@ -95,6 +95,7 @@ function setColapsar(elemento) {
 // para dar dinamismo a la página.
 function scrollArticulo(hashtag) {
     var elemento = hashtag.substring(1, hashtag.length);
+    alert(elemento);
     cerrarAcordeonAbierto();
     abrirAcordeon(elemento);
 }
@@ -114,5 +115,6 @@ if (page == "perspectivas.html") {
 
 //Dispara la función para cargar el tema
 window.addEventListener('DOMContentLoaded', cargaTema);
+
 
 
