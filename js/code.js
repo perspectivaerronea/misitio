@@ -4,15 +4,16 @@
 
 // setTema
 // Esta función se usa para asignar el tema que va a usarse.
+// Crea un elemento en el navegador llamadao "tema" que va a guardar el tema de la página. Es similar a una cookie.
 function setTema(themeName) {
-    localStorage.setItem('theme', themeName);
+    localStorage.setItem('tema', themeName);
     document.documentElement.className = themeName;
 }
 
 // cambiaTema
 // Esta función permite intercambiar entre el tema diurno y el nocturno.
 function cambiaTema() {
-    if (localStorage.getItem('theme') === 'theme-dark') {
+    if (localStorage.getItem('tema') === 'theme-dark') {
         setTema('theme-light');
     } else {
         setTema('theme-dark');
@@ -55,7 +56,7 @@ function cargaArticulo() {
 // cargaTema
 // esta función revisa que tema está cargado y en base a eso define el estado del slider del tema, más allá de definir el tema para la página.
 function cargaTema() {
-    if (localStorage.getItem('theme') === 'theme-dark') {
+    if (localStorage.getItem('tema') === 'theme-dark') {
         setTema('theme-dark');
         document.getElementById('slider').checked = false;
     } else {
