@@ -1,5 +1,5 @@
 {
-  "name": "3erentrega",
+  "name": "final",
   "version": "1.0.0",
   "description": "2da Práctica de SASS.",
   "main": "index.js",
@@ -275,5 +275,10 @@
     "yallist": "^4.0.0",
     "yargs-parser": "^20.2.9",
     "widest-line": "^3.1.0"
-  }
+  },
+  "keywords": [
+    "proyecto",
+    "final",
+    "sass"
+  ]
 }

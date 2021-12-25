@@ -109,7 +109,7 @@ var path = window.location.pathname;
 var page = path.split("/").pop();
 
 //Este código previene que se ejecute este código en las páginas donde no es necesario.
-if (page == "perspectivas.html") {
+if (page == "perspectivas.html" || page == "landingpage.html") {
     window.addEventListener('DOMContentLoaded', cargaArticulo);
 }
 
