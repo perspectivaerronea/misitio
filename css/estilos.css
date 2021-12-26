@@ -196,7 +196,7 @@ CLASES
   position: relative;
   display: inline-block;
   width: 60px;
-  height: 34px; }
+  height: 40px; }
   .switch input {
     opacity: 0;
     width: 0;
@@ -402,14 +402,37 @@ ID
   .toast-body a {
     margin: 0 auto; }
 
+.ms-auto {
+  vertical-align: middle; }
+
 /*Landing Page*/
 .menu-lp {
-  position: -webkit-sticky;
   position: sticky;
-  top: 0px; }
+  top: 0;
+  z-index: 5;
+  vertical-align: middle; }
 
 .lp {
   margin-bottom: 15px; }
+
+#classic-menu-item {
+  content: var(--classic); }
+
+#landing-menu-item {
+  content: var(--classic); }
+
+.lp-img {
+  width: 35px;
+  height: 35px; }
+
+/*Fix para el scroll con el menú flotante así no se pisa con el contenido*/
+#lp-offset :target::before {
+  content: "";
+  display: block;
+  height: 65px;
+  /* fixed header height*/
+  margin: -65px 0 0;
+  /* negative fixed header height */ }
 
 /* MEDIA QUERIES */
 @media (min-width: 1201px) {

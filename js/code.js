@@ -68,7 +68,7 @@ function cargaTema() {
 // cerrarAcordeonAbierto
 // Esta funcion cierra todos los items del acordeon.
 function cerrarAcordeonAbierto() {
-    
+
     //Arma una lista con todos los elementos que tenga la clase show
     let x = document.getElementsByClassName("show");
     // Si hay algún elemento con esta clase se la quita.
@@ -79,9 +79,9 @@ function cerrarAcordeonAbierto() {
     var headings = document.querySelectorAll('[id ^= "head-bt-"]');
     // Con el código anterior se obtiene una lista de elementos que cumplen con la condición de que su ID empieza con 'head-bt-'
     // Por cada uno de estos llama a la función 'setColapsar'.
-    for (var i = 0; i < headings.length; i++) {        
+    for (var i = 0; i < headings.length; i++) {
         setColapsar(headings[i].id);
-    }    
+    }
 }
 
 // setColapsar
@@ -95,9 +95,41 @@ function setColapsar(elemento) {
 // Esta función permite que la guía de posteos abra el item del acordeon que corresponde y se mueva hacía el mismo 
 // para dar dinamismo a la página.
 function scrollArticulo(hashtag) {
-    var elemento = hashtag.substring(1, hashtag.length);    
+    var elemento = hashtag.substring(1, hashtag.length);
     cerrarAcordeonAbierto();
     abrirAcordeon(elemento);
+}
+
+function updateHashTag() {
+
+    var lista = document.getElementsByClassName("ancla");
+
+    for (let i = 0; i < lista.length; i++) {
+        if (isInViewport(lista[i])) {
+            alert(lista[i].id);
+            // alert(messageText);
+        }
+    }
+}
+
+function isInViewport(element) {
+
+    const rect = element.getBoundingClientRect();
+
+    if (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)) {
+        alert(element.id)
+    }
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight - document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth - document.documentElement.clientWidth)
+    );
 }
 
 //
@@ -116,5 +148,7 @@ if (page == "perspectivas.html" || page == "landingpage.html") {
 //Dispara la función para cargar el tema
 window.addEventListener('DOMContentLoaded', cargaTema);
 
+if (page == "landingpage.html") {
+    window.addEventListener('scroll', updateHashTag);
 
-
+}

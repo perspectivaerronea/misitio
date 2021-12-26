@@ -17,57 +17,58 @@
     <title>Perspectiva Errónea - OnePage </title>
 </head>
 
-<body>
-    <header>
-        <div class="menu-lp">
-            <nav class="navbar navbar-expand-lg navbar-light navColor">
-                <div class="container-fluid">
-                    <h1><a class="navbar-brand navItemColor" href="#">PERSPECTIVA ERRÓNEA</a></h1>
+<body id="lp-offset">
+    <header class="menu-lp">
+        <nav class="navbar navbar-expand-lg navbar-light navColor ">
+            <div class="container-fluid">
+                <h1><a class="navbar-brand navItemColor" href="#">PERSPECTIVA ERRÓNEA</a></h1>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-0 mb-2 mb-lg-0 ms-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle navItemColor" href="#" id="navbarDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Inicio
-                                </a>
-                                <ul class="dropdown-menu ms-auto" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Inicio</a></li>
-                                    <li><a class="dropdown-item" href="#preview">Preview Perspectivas</a></li>
-                                    <li><a class="dropdown-item" href="#galeria">Galeria</a></li>
-                                    <li><a class="dropdown-item" href="#podcast">Podcast</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#perspectivas">Perspectivas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#quien">¿Qué es Perspectiva
-                                    Errónea?</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contacto-lp">Contacto</a>
-                            </li>
-                            <li class="nav-item ms-auto">
-                                <div class="contenedorTema">
-                                    <label id="switch" class="switch">
-                                        <input type="checkbox" onchange="cambiaTema()" id="slider">
-                                        <span class="slider round"></span>
-                                    </label>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-0 mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle navItemColor" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Inicio
+                            </a>
+                            <ul class="dropdown-menu ms-auto" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Inicio</a></li>
+                                <li><a class="dropdown-item" href="#preview">Preview Perspectivas</a></li>
+                                <li><a class="dropdown-item" href="#galeria">Galeria</a></li>
+                                <li><a class="dropdown-item" href="#podcast">Podcast</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#perspectivas">Perspectivas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quien">¿Qué es Perspectiva
+                                Errónea?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto-lp">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html"><img class="lp-img" src="../images/misc/classic.png"  alt="Modo Clásico"></a>                            
+                        </li>
+                        <li class="nav-item ms-auto">
+                            <div class="contenedorTema">
+                                <label id="switch" class="switch">
+                                    <input type="checkbox" onchange="cambiaTema()" id="slider">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
-    <main>
+    <main id="principal" class="ancla">
         <article class="principal">
             <hr>
             <h2>La Novedad</h2>
@@ -86,7 +87,7 @@
             </div>
         </article>
     </main>
-    <section id="preview">
+    <section id="preview" class="ancla">
         <article>
             <hr>
             <h2>Preview Perspectivas</h2>
@@ -183,7 +184,7 @@
             </div>
         </article>
     </section>
-    <section id="galeria">
+    <section id="galeria" class="ancla">
         <article>
             <hr>
             <h2>Galería NFT</h2>
@@ -313,7 +314,7 @@
             </div>
         </article>
     </section>
-    <section id="podcast">
+    <section id="podcast" class="ancla">
         <hr>
         <h2>Podcast</h2>
         <p>No hace falta más que darle play para comenzar a escuchar los episodios del podcast. Está, como quien dice,
@@ -326,7 +327,7 @@
 
 
     <!-- Perspectivas Inicio -->
-    <section id="perspectivas" class="lp">
+    <section id="perspectivas" class="lp ancla">
         <hr>
         <h2>Perspectivas</h2>
         <div class="accordion" id="accordionPosteos">
@@ -781,35 +782,11 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="posteos">
-            <h6>Guía Rápida de Posteos</h6>
-            <ul>
-                <li><a id="post-last" href="#collapse-last" onclick="scrollArticulo('#collapse-last')">Resumen del
-                        Año</a>
-                </li>
-                <li><a id="post-five" href="#collapse-five" onclick="scrollArticulo('#collapse-five')">NFT ¿Eso con qué
-                        se
-                        some?</a></li>
-                <li><a id="post-four" href="#collapse-four" onclick="scrollArticulo('#collapse-four')">Música y Sonido
-                        en
-                        Dictadura</a></li>
-                <li><a id="post-three" href="#collapse-three" onclick="scrollArticulo('#collapse-three')">“No está a la
-                        altura de Pump” ... ¡Lo superó!</a></li>
-                <li><a id="post-two" href="#collapse-two" onclick="scrollArticulo('#collapse-two')">C Pikó la
-                        clandestina o
-                        "Comenzaron los disturbios en la fiesta
-                        Prohibida"</a></li>
-                <li><a id="post-one" href="#collapse-one" onclick="scrollArticulo('#collapse-one')">NFT - ¡Comprame el
-                        JPG!</a></li>
-            </ul>
-
-        </div> -->
     </section>
     <!-- Perspectivas Fin -->
 
     <!-- Quien Inicio -->
-    <section id="quien" class="lp">
+    <section id="quien" class="lp ancla">
         <article>
             <hr>
             <h2>¿Qué es Perspectiva Errónea?</h2>
@@ -914,7 +891,7 @@
     <!-- Quien Fin -->
 
     <!-- Contacto Inicio -->
-    <section id="contacto-lp" class="lp">
+    <section id="contacto-lp" class="lp ancla">
         <hr>
         <h2 id="contacto"> ¡Mandanos tu mensaje! </h2>
 
