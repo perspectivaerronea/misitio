@@ -75,6 +75,7 @@ function cerrarAcordeonAbierto() {
     if (x.length > 0) {
         x[0].classList.remove("show");
     }
+
     //Este código obtiene todos los button que son los headers de los acordeones y les agrega la clase collapsed
     var headings = document.querySelectorAll('[id ^= "head-bt-"]');
     // Con el código anterior se obtiene una lista de elementos que cumplen con la condición de que su ID empieza con 'head-bt-'
@@ -100,36 +101,75 @@ function scrollArticulo(hashtag) {
     abrirAcordeon(elemento);
 }
 
-function updateHashTag() {
+// enVista
+// Esta función evalua si el elemento que se pasa como parámetro está dentro de la visual del usuario
+function enVista(element) {
 
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (document.documentElement.clientHeight) &&
+        rect.right <= (document.documentElement.clientWidth)
+    );
+}
+
+// posicionScroll
+// esta función toma todos los elementos que tengan la clase "ancla" y luego recorre la lista
+// para armar la url del cambio de estilo de la web y dirija al usuario a la página correspondiente. 
+function posicionScroll() {
+    var hashtag = "";
     var lista = document.getElementsByClassName("ancla");
 
     for (let i = 0; i < lista.length; i++) {
-        if (isInViewport(lista[i])) {
-            alert(lista[i].id);
-            // alert(messageText);
+        if (enVista(lista[i])) {
+            armaURLDestino(lista[i].id);
         }
     }
 }
 
-function isInViewport(element) {
-
-    const rect = element.getBoundingClientRect();
-
-    if (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)) {
-        alert(element.id)
+// armaURLDestino
+// Esta función se ocupa de armar la url que se ocupa de hacer el cambio al modo clásico
+// y que lleve al usuario a la página correspondiente, dependiendo donde esté parado en la landing page.
+function armaURLDestino(hashtag) {
+    var destino = "";
+    // alert(hashtag);
+    // window.location.hash = hashtag;
+    switch (hashtag) {
+        case "N1":
+        case "#":
+        case "top":
+            destino = "../index.html";
+            break;
+        case "N2":
+        case "preview":
+            destino = "../index.html#perspectivas";
+            break;
+        case "N3":
+        case "galeria":
+            destino = "../index.html#galeria";
+            break;
+        case "N4":
+        case "podcast":
+            destino = "../index.html#podcast";
+            break;
+        case "N5":
+        case "perspectivas":
+            destino = "./perspectivas.html#collapse-last";
+            break;
+        case "N6":
+        case "queEsPerspectivaErronea":
+            destino = "./queEsPerspectivaErronea.html";
+            break;
+        case "N7":
+        case "contacto-lp":
+            destino = "./contacto.html";
+            break;
+        default:
+            destino = "../index.html";
+            break;
     }
-
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight - document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth - document.documentElement.clientWidth)
-    );
+    document.getElementById('clasico').setAttribute('href', destino);
 }
 
 //
@@ -148,7 +188,7 @@ if (page == "perspectivas.html" || page == "landingpage.html") {
 //Dispara la función para cargar el tema
 window.addEventListener('DOMContentLoaded', cargaTema);
 
+//Evalua la posición del scroll para determinar en que sección se está parado.
 if (page == "landingpage.html") {
-    window.addEventListener('scroll', updateHashTag);
-
+    window.addEventListener('scroll', posicionScroll);
 }
