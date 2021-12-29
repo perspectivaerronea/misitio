@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--SEO-->
-    <meta name="keywords" content="perspectiva errónea, podcast, entretenimiento, música, nft, youtube, spotify, newsletter, contacto">
+    <meta name="keywords"
+        content="perspectiva errónea, podcast, entretenimiento, música, nft, youtube, spotify, newsletter, contacto">
     <meta name="description"
         content="En esta página vas a encontrar todo lo que compone al ecosistema de Perspectiva Errónea en un solo lugar, desde los videos, los podcast hasta un espacio en donde mandarnos un mensaje con tus consultas.">
     <link rel="stylesheet" href="https://use.typekit.net/vbt0cvs.css">
@@ -318,6 +319,9 @@
     <section id="podcast">
         <hr>
         <h2 id="N4" class="ancla">Podcast</h2>
+        <p>¿Te gustan los datos inútiles? ¿te interesa escuchar a alguien que aún tras investigar sobre un tema supone
+            que le está pifiando en algo? </p>
+        <p>En ese caso ¡enhorabuena! ¡bienvenid@!</p>
         <p>No hace falta más que darle play para comenzar a escuchar los episodios del podcast. Está, como quien dice,
             servido en bandeja.</p>
         <iframe width="100%" height="300" title="Lista Episodios de mi Podcast"
@@ -336,7 +340,7 @@
 
                 <h2 class="accordion-header" id="heading-last">
                     <button id="head-bt-last" class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-last" aria-expanded="true" aria-controls="collapse-last">
+                        data-bs-target="#collapse-last" aria-expanded="true" aria-controls="collapse-last" onclick="setHashtag('collapse-last', 'l')">
                         <div class="tituloPosteo"> 07/12/2021 - Resumen Anual 2021 </div>
                     </button>
                 </h2>
@@ -380,7 +384,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading-five">
                     <button id="head-bt-five" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-five" aria-expanded="false" aria-controls="collapse-five">
+                        data-bs-target="#collapse-five" aria-expanded="false" aria-controls="collapse-five" onclick="setHashtag('collapse-five', 'l')">
                         <div class="tituloPosteo"> 26/11/2021 - ¿NFT?¿Eso con qué se come? - Introducción al Critptoarte
                         </div>
                     </button>
@@ -426,7 +430,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading-four">
                     <button id="head-bt-four" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-four" aria-expanded="false" aria-controls="collapse-four">
+                        data-bs-target="#collapse-four" aria-expanded="false" aria-controls="collapse-four" onclick="setHashtag('collapse-four', 'l')">
                         <div class="tituloPosteo"> 03/11/2021 - Música y Sonido en Dictadura</div>
                     </button>
                 </h2>
@@ -471,7 +475,7 @@
                 <h2 class="accordion-header" id="heading-three">
                     <button id="head-bt-three" class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#collapse-three" aria-expanded="false"
-                        aria-controls="collapse-three">
+                        aria-controls="collapse-three" onclick="setHashtag('collapse-three', 'l')">
                         <div class="tituloPosteo"> 26/10/2021 - “No está a la altura de Pump” ... ¡Lo superó!</div>
                     </button>
                 </h2>
@@ -552,14 +556,14 @@
             </div>
 
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
+                <h2 class="accordion-header" id="heading-two">
                     <button id="head-bt-two" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-two" aria-expanded="false" aria-controls="collapse-two">
+                        data-bs-target="#collapse-two" aria-expanded="false" aria-controls="collapse-two" onclick="setHashtag('collapse-two', 'l')">
                         <div class="tituloPosteo"> 12/10/2021 - C Pikó la clandestina o "Comenzaron los disturbios en la
                             fiesta Prohibida"</div>
                     </button>
                 </h2>
-                <div id="collapse-two" class="accordion-collapse collapse" aria-labelledby="heading-two"
+                <div id="collapse-two" class="accordion-collapse collapse ancla" aria-labelledby="heading-two"
                     data-bs-parent="#accordionPosteos">
                     <div class="accordion-body">
                         <article>
@@ -601,7 +605,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading-one">
                     <button id="head-bt-one" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-one" aria-expanded="false" aria-controls="collapse-one">
+                        data-bs-target="#collapse-one" aria-expanded="false" aria-controls="collapse-one" onclick="setHashtag('collapse-one', 'l')">
                         <div class="tituloPosteo"> 10/03/2021 - NFT - ¡Comprame el JPG!</div>
                     </button>
                 </h2>

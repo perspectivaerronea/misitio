@@ -42,15 +42,21 @@ function abrirAcordeon(elemento) {
 // toma el hashtag de la url, luego evalua si tiene valor o no y en base a eso determina que enviar a la función "abrirAcordeon"
 function cargaArticulo() {
 
+    var hashtag = 'collapse-last';
     if (window.location.hash) {
-
-        var hashtag = window.location.hash;
-        var elemento = hashtag.substring(1, hashtag.length);
-
-        abrirAcordeon(elemento);
+        hashtag = window.location.hash;
+        hashtag = hashtag.substring(1, hashtag.length);
+        abrirAcordeon(hashtag);
     } else {
         abrirAcordeon('collapse-last');
     }
+
+    if (page == "perspectivas.html") {
+        setHashtag(hashtag, 'c');
+    } else {
+        setHashtag(hashtag, 'l');
+    }
+
 }
 
 // cargaTema
@@ -97,8 +103,14 @@ function setColapsar(elemento) {
 // para dar dinamismo a la página.
 function scrollArticulo(hashtag) {
     var elemento = hashtag.substring(1, hashtag.length);
+    var destino = "./landingpage.html" + hashtag;
+
     cerrarAcordeonAbierto();
     abrirAcordeon(elemento);
+
+    //Teniendo en cuenta cual de los articulos esté abierto, lo usa en la url del cambio de estilo de la página, 
+    //así, si el usuario hace el cambio de estilo, lo lleva a donde estaba parado.
+    document.getElementById('onepage').setAttribute('href', destino);
 }
 
 // enVista
@@ -109,8 +121,10 @@ function enVista(element) {
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        rect.bottom <= (document.documentElement.clientHeight) &&
-        rect.right <= (document.documentElement.clientWidth)
+        // rect.bottom <= (document.documentElement.clientHeight) &&
+        // rect.right <= (document.documentElement.clientWidth)
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
 
@@ -120,10 +134,14 @@ function enVista(element) {
 function posicionScroll() {
     var hashtag = "";
     var lista = document.getElementsByClassName("ancla");
+    var encontrado = false;
 
     for (let i = 0; i < lista.length; i++) {
         if (enVista(lista[i])) {
+            // if (encontrado == false) {
             armaURLDestino(lista[i].id);
+            //     encontrado = true;
+            // }
         }
     }
 }
@@ -132,7 +150,7 @@ function posicionScroll() {
 // Esta función se ocupa de armar la url que se ocupa de hacer el cambio al modo clásico
 // y que lleve al usuario a la página correspondiente, dependiendo donde esté parado en la landing page.
 function armaURLDestino(hashtag) {
-    var destino = "";
+    var destino = " ";
     // alert(hashtag);
     // window.location.hash = hashtag;
     switch (hashtag) {
@@ -155,7 +173,12 @@ function armaURLDestino(hashtag) {
             break;
         case "N5":
         case "perspectivas":
-            destino = "./perspectivas.html#collapse-last";
+            var articulo = document.getElementsByClassName("show");
+            if (articulo.length > 0) {
+                destino = "./perspectivas.html#" + articulo[1].id;
+            } else {
+                destino = "./perspectivas.html#collapse-last";
+            }
             break;
         case "N6":
         case "queEsPerspectivaErronea":
@@ -166,10 +189,32 @@ function armaURLDestino(hashtag) {
             destino = "./contacto.html";
             break;
         default:
-            destino = "../index.html";
+            if (hashtag == " ") {
+                destino = "../index.html";
+            }
             break;
     }
-    document.getElementById('clasico').setAttribute('href', destino);
+    if (destino != " ") {
+        alert(hashtag);
+        document.getElementById('clasico').setAttribute('href', destino);
+    }
+}
+
+//setHashtag
+//Esta función se ocupa de armar el link de destino para los posteos dentro de la sección "Perspectivas"
+function setHashtag(hashtag, origen) {
+    var articulo = document.getElementsByClassName("show");
+    var destino = "";
+    var pagina = "";
+    if (origen == "l") {
+        destino = "./perspectivas.html#" + hashtag;
+        pagina = "clasico";
+    } else {
+        destino = "./landingpage.html#" + hashtag;
+        pagina = "onepage";
+    }
+    document.getElementById(pagina).setAttribute('href', destino);
+    // alert(destino);
 }
 
 //

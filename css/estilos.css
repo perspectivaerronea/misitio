@@ -416,12 +416,6 @@ ID
 .lp {
   margin-bottom: 15px; }
 
-#classic-menu-item {
-  content: var(--classic); }
-
-#landing-menu-item {
-  content: var(--classic); }
-
 .lp-img {
   width: 35px;
   height: 35px; }
