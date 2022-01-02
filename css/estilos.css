@@ -8,7 +8,8 @@ body {
   font-family: "Korolev", sans-serif, monospace;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--color-fuente); }
+  color: var(--color-fuente);
+  font-display: swap; }
 
 main,
 section {
