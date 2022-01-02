@@ -12,7 +12,7 @@ ID
 }
 
 #contacto {
-    text-align: center;    
+    text-align: center;
 }
 
 #correoContacto .flex {
@@ -26,18 +26,13 @@ ID
 
 /*Fix para el scroll con el menú flotante así no se pisa con el contenido*/
 #cl-offset :target::before {
-    content: "";
-    display: block;
-    height: 65px; /* fixed header height*/
-    margin: -65px 0 0; /* negative fixed header height */
-  }
+    @include OffsetCabecera(65px);
+}
 
-@each $id, $red in $listaRedes{
-    #social-#{$red}{
+@each $id,
+$red in $listaRedes {
+    #social-#{$red} {
         content: var(--social-#{$red});
         @include max-wh-eq(40px);
     }
 }
-
-
-

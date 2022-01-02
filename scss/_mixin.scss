@@ -1,64 +1,76 @@
 //Mixins de la página
 
 // Formato de Texto
-@mixin formatoTexto{
+@mixin formatoTexto {
     font-family: $font-family;
     font-size: $font-size;
     font-weight: $font-weight;
     color: var(--color-fuente);
 }
 
-@mixin wh-eq($medida){
+@mixin wh-eq($medida) {
     width: $medida;
     height: $medida;
 }
 
-@mixin wh-dif($width, $height){
+@mixin wh-dif($width, $height) {
     width: $width;
     height: $height;
 }
 
-@mixin max-wh-eq($medida){
+@mixin max-wh-eq($medida) {
     max-width: $medida;
     max-height: $medida;
 }
 
 // Armado de un borde básico
-@mixin armarBorde($tipo, $grosor, $color, $radio, $colorFondo){
+@mixin armarBorde($tipo, $grosor, $color, $radio, $colorFondo) {
     border: $tipo $grosor $color;
     border-radius: $radio;
     background-color: $colorFondo;
 }
 
 // Para usar en los hover
-@mixin modHover($color, $escala){
+@mixin modHover($color, $escala) {
     color: $color;
     transform: scale($escala);
 }
 
 // Se usa para crear las clases que temporizan los toast.
-@mixin animacionPopUp($tiempo){
+@mixin animacionPopUp($tiempo) {
     animation: mostrarPopup $tiempo;
 }
 
 // Recibe los parámetros que luego forman parte de los keyframes de una animación
-@mixin animMarquesina($porcen){
+@mixin animMarquesina($porcen) {
     transform: translateX($porcen);
 }
 
 // Para ahorrar código en la animación de los toast
-@mixin escalaPopup($escala){
+@mixin escalaPopup($escala) {
     transform: scale($escala);
 }
 
 //Aspect Ratio 
-@function calculoAspectRatioPercen($ancho, $alto){
+@function calculoAspectRatioPercen($ancho, $alto) {
     $result: 0;
     $result: ($alto/$ancho)*100%;
     @return $result;
 }
 
-@mixin armadoAspectRatio($ancho, $alto){
+@mixin armadoAspectRatio($ancho, $alto) {
     padding-bottom: calculoAspectRatioPercen($ancho, $alto);
 }
 
+//Arma el offset para que scroll funcione bien trabajando con el menú flotante
+@mixin OffsetCabecera($tamOffset) {
+
+    $comp-tamOffset: -1 * $tamOffset;
+
+    content: "";
+    display: block;
+    height: $tamOffset;
+    /* fixed header height*/
+    margin: $comp-tamOffset 0 0;
+    /* negative fixed header height */
+}

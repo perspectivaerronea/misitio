@@ -17,7 +17,13 @@
     .navItemColor {
         color: var(--color-nav-1);
     }
+
+    &-light &-nav .nav-link:focus:hover,
+    &-light &-brand:focus:hover {
+        color: lightcoral;
+    }
 }
+
 
 
 .carousel {
@@ -54,12 +60,12 @@
     margin-right: 20%;
     margin-left: 5%;
 
-    &-button, &-collapse{
-        background-color: var(--color-fondo);      
+    &-button,
+    &-collapse {
+        background-color: var(--color-fondo);
         color: var(--color-fuente);
     }
 
-    // &-button,
     &-item {
         background-color: var(--color-nav-1);
     }
@@ -88,7 +94,7 @@
     }
 }
 
-.ms-auto{
-    vertical-align:middle;
+.ms-auto {
+    vertical-align: middle;
 
 }

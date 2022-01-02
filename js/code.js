@@ -43,7 +43,6 @@ function cargaTema() {
 //setHashtag
 //Esta función se ocupa de armar el link de destino para los posteos dentro de la sección "Perspectivas"
 function setHashtag(hashtag, origen) {
-    var articulo = document.getElementsByClassName("show");
     var destino = "";
     var pagina = "";
     if (origen == "l") {
@@ -67,9 +66,7 @@ function abrirAcordeon(elemento) {
     var fullname = elemento;
     var subfix = fullname.split("-").pop();
 
-
     var heading = "head-bt-" + subfix;
-
     var elemID = document.getElementById(heading);
     elemID.classList.remove("collapsed");
 }
@@ -110,7 +107,7 @@ function cerrarAcordeonAbierto() {
     //Arma una lista con todos los elementos que tenga la clase show
     let x = document.getElementsByClassName("show");
     // Si hay algún elemento con esta clase se la quita.
-    if (x.length > 0) {
+    if (x.length > 0 && x.id != "") {
         x[0].classList.remove("show");
     }
 
@@ -130,16 +127,10 @@ function cerrarAcordeonAbierto() {
 function scrollArticulo(hashtag) {
     var elemento = hashtag.substring(1, hashtag.length);
     var destino = "./landingpage.html" + hashtag;
-    var exp = new RegExp('\\collapse');
 
-    //Teniendo en cuenta cual de los articulos esté abierto, lo usa en la url del cambio de estilo de la página, 
-    //así, si el usuario hace el cambio de estilo, lo lleva a donde estaba parado.
-    // if (elemento.search(exp) != -1) || () {
-        cerrarAcordeonAbierto();
-        abrirAcordeon(elemento);
-        document.getElementById('onepage').setAttribute('href', destino);
-    // }
-
+    cerrarAcordeonAbierto();
+    abrirAcordeon(elemento);
+    document.getElementById('onepage').setAttribute('href', destino);
 }
 
 // enVista
@@ -152,7 +143,9 @@ function enVista(element) {
         rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+        rect.bottom != 0 &&
+        rect.right != 0
     );
 }
 
@@ -200,9 +193,10 @@ function armaURLDestino(hashtag, origen) {
             break;
         case "N5":
         case "perspectivas":
-            var articulo = document.getElementsByClassName("show");
+            // Obtengo la lista de elementos que tienen la clase 'show' que esten contenido bajo el elemento con el id = 'perspectivas'
+            var articulo = document.getElementById('perspectivas').getElementsByClassName("show");
             if (articulo.length > 0) {
-                destino = "./perspectivas.html#" + articulo[1].id;
+                destino = "./perspectivas.html#" + articulo[0].id;
             } else {
                 destino = "./perspectivas.html#collapse-last";
             }
@@ -241,17 +235,10 @@ function posicionScroll() {
     var hashtag = "";
     var lista = document.getElementsByClassName("ancla");
     var encontrado = false;
-    // var exp = new RegExp('\\collapse');
 
     for (let i = 0; i < lista.length; i++) {
         if (!(encontrado)) {
             if (enVista(lista[i])) {
-                //Este código evalua si el ancla del scroll es alguno de los posteos de la sección "Perspectivas"
-                //en cuyo caso le asigna el ID de la sección para que el armado de la URL resuelva solo a que posteo dirigir al usuario   
-                /*if (lista[i].search(exp) != -1) {                    
-                    lista[i] = 'N5';
-                }*/
-
                 if (page == "landingpage.html") {
                     armaURLDestino(lista[i].id, 'l');
                 }
@@ -262,6 +249,7 @@ function posicionScroll() {
             }
         }
     }
+
 }
 
 
