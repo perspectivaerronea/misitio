@@ -19,8 +19,8 @@
     <title>Perspectiva Errónea - Inicio</title>
 </head>
 
-<body>
-    <header>
+<body id="cl-offset">
+    <header clasS="menu">
         <nav class="navbar navbar-expand-lg navbar-light navColor">
             <div class="container-fluid">
                 <h1><a class="navbar-brand navItemColor" href="#">PERSPECTIVA ERRÓNEA</a></h1>
@@ -39,7 +39,7 @@
                             </a>
                             <ul class="dropdown-menu ms-auto" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Inicio</a></li>
-                                <li><a class="dropdown-item" href="#perspectivas">Preview Perspectivas</a></li>
+                                <li><a class="dropdown-item" href="#preview">Preview Perspectivas</a></li>
                                 <li><a class="dropdown-item" href="#galeria">Galeria</a></li>
                                 <li><a class="dropdown-item" href="#podcast">Podcast</a></li>
                             </ul>
@@ -48,7 +48,7 @@
                             <a class="nav-link" href="./pages/perspectivas.html">Perspectivas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/queEsPerspectivaErronea.html">¿Qué es Perspectiva
+                            <a class="nav-link" href="./pages/quien.html">¿Qué es Perspectiva
                                 Errónea?</a>
                         </li>
                         <li class="nav-item">
@@ -72,10 +72,10 @@
         </nav>
 
     </header>
-    <main>
+    <main id="novedad">
         <article class="principal">
             <hr>
-            <h2>La Novedad</h2>
+            <h2 id="N1" class="ancla">La Novedad</h2>
             <p>¡Por fin llegó! Se hizo esperar pero acá está el segundo episodio del podcast. Y cómo todo se recicla la
                 temática va a ser lo que caracteriza al último video del canal que fue un VLOG. Así que va a ir de eso
                 de compartir mi experiencia y como lo llevé adelante; pero no voy a estar solo en este paseo, sino que
@@ -91,10 +91,10 @@
             </div>
         </article>
     </main>
-    <section id="perspectivas">
+    <section id="preview">
         <article>
             <hr>
-            <h2>Preview Perspectivas</h2>
+            <h2 id="N2" class="ancla">Preview Perspectivas</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4" data-masonry='{"percentPosition": true }'>
                 <div class="col">
                     <div class="card bordeRecuadroEspecial">
@@ -185,7 +185,7 @@
     <section id="galeria">
         <article>
             <hr>
-            <h2>Galería NFT</h2>
+            <h2 id="N3" class="ancla">Galería NFT</h2>
 
             <div id="carouselGaleria" class="carousel carousel-light slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -312,9 +312,10 @@
             </div>
         </article>
     </section>
+    <!-- <section id="podcast" class="ancla"> -->
     <section id="podcast">
         <hr>
-        <h2>Podcast</h2>
+        <h2 id="N4" class="ancla">Podcast</h2>
         <p>¿Te gustan los datos inútiles? ¿te interesa escuchar a alguien que aún tras investigar sobre un tema supone
             que le está pifiando en algo? </p>
         <p>En ese caso ¡enhorabuena! ¡bienvenid@!</p>

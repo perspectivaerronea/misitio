@@ -2,6 +2,10 @@
 // FUNCIONES
 //
 
+//
+// FUNCIONES ASOCIADAS AL TEMA DEL SITIO
+//
+
 // setTema
 // Esta función se usa para asignar el tema que va a usarse.
 // Crea un elemento en el navegador llamadao "tema" que va a guardar el tema de la página. Es similar a una cookie.
@@ -18,6 +22,38 @@ function cambiaTema() {
     } else {
         setTema('theme-dark');
     }
+}
+
+// cargaTema
+// esta función revisa que tema está cargado y en base a eso define el estado del slider del tema, más allá de definir el tema para la página.
+function cargaTema() {
+    if (localStorage.getItem('tema') === 'theme-dark') {
+        setTema('theme-dark');
+        document.getElementById('slider').checked = false;
+    } else {
+        setTema('theme-light');
+        document.getElementById('slider').checked = true;
+    }
+}
+
+//
+// FUNCIONES ASOCIADAS AL COMPORTAMIENTO DEL SITIO / ARMADO DE LINKS 
+//
+
+//setHashtag
+//Esta función se ocupa de armar el link de destino para los posteos dentro de la sección "Perspectivas"
+function setHashtag(hashtag, origen) {
+    var articulo = document.getElementsByClassName("show");
+    var destino = "";
+    var pagina = "";
+    if (origen == "l") {
+        destino = "./perspectivas.html#" + hashtag;
+        pagina = "clasico";
+    } else {
+        destino = "./landingpage.html#" + hashtag;
+        pagina = "onepage";
+    }
+    document.getElementById(pagina).setAttribute('href', destino);
 }
 
 // abrirAcordeon
@@ -43,6 +79,7 @@ function abrirAcordeon(elemento) {
 function cargaArticulo() {
 
     var hashtag = 'collapse-last';
+
     if (window.location.hash) {
         hashtag = window.location.hash;
         hashtag = hashtag.substring(1, hashtag.length);
@@ -59,16 +96,11 @@ function cargaArticulo() {
 
 }
 
-// cargaTema
-// esta función revisa que tema está cargado y en base a eso define el estado del slider del tema, más allá de definir el tema para la página.
-function cargaTema() {
-    if (localStorage.getItem('tema') === 'theme-dark') {
-        setTema('theme-dark');
-        document.getElementById('slider').checked = false;
-    } else {
-        setTema('theme-light');
-        document.getElementById('slider').checked = true;
-    }
+// setColapsar
+// Esta función le suma la clase 'collapsed' al elemento que se pase como parámetro
+function setColapsar(elemento) {
+    var elemID = document.getElementById(elemento);
+    elemID.classList.add("collapsed");
 }
 
 // cerrarAcordeonAbierto
@@ -91,12 +123,6 @@ function cerrarAcordeonAbierto() {
     }
 }
 
-// setColapsar
-// Esta función le suma la clase 'collapsed' al elemento que se pase como parámetro
-function setColapsar(elemento) {
-    var elemID = document.getElementById(elemento);
-    elemID.classList.add("collapsed");
-}
 
 // scrollArticulo
 // Esta función permite que la guía de posteos abra el item del acordeon que corresponde y se mueva hacía el mismo 
@@ -104,13 +130,16 @@ function setColapsar(elemento) {
 function scrollArticulo(hashtag) {
     var elemento = hashtag.substring(1, hashtag.length);
     var destino = "./landingpage.html" + hashtag;
-
-    cerrarAcordeonAbierto();
-    abrirAcordeon(elemento);
+    var exp = new RegExp('\\collapse');
 
     //Teniendo en cuenta cual de los articulos esté abierto, lo usa en la url del cambio de estilo de la página, 
     //así, si el usuario hace el cambio de estilo, lo lleva a donde estaba parado.
-    document.getElementById('onepage').setAttribute('href', destino);
+    // if (elemento.search(exp) != -1) || () {
+        cerrarAcordeonAbierto();
+        abrirAcordeon(elemento);
+        document.getElementById('onepage').setAttribute('href', destino);
+    // }
+
 }
 
 // enVista
@@ -118,58 +147,56 @@ function scrollArticulo(hashtag) {
 function enVista(element) {
 
     const rect = element.getBoundingClientRect();
+
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        // rect.bottom <= (document.documentElement.clientHeight) &&
-        // rect.right <= (document.documentElement.clientWidth)
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
 
-// posicionScroll
-// esta función toma todos los elementos que tengan la clase "ancla" y luego recorre la lista
-// para armar la url del cambio de estilo de la web y dirija al usuario a la página correspondiente. 
-function posicionScroll() {
-    var hashtag = "";
-    var lista = document.getElementsByClassName("ancla");
-    var encontrado = false;
-
-    for (let i = 0; i < lista.length; i++) {
-        if (enVista(lista[i])) {
-            // if (encontrado == false) {
-            armaURLDestino(lista[i].id);
-            //     encontrado = true;
-            // }
-        }
-    }
-}
 
 // armaURLDestino
 // Esta función se ocupa de armar la url que se ocupa de hacer el cambio al modo clásico
 // y que lleve al usuario a la página correspondiente, dependiendo donde esté parado en la landing page.
-function armaURLDestino(hashtag) {
+function armaURLDestino(hashtag, origen) {
     var destino = " ";
-    // alert(hashtag);
-    // window.location.hash = hashtag;
+
     switch (hashtag) {
         case "N1":
         case "#":
         case "top":
-            destino = "../index.html";
+        case "novedad":
+            if (origen == 'l') {
+                destino = "../index.html";
+            } else {
+                destino = "./pages/landingpage.html";
+            }
             break;
         case "N2":
         case "preview":
-            destino = "../index.html#perspectivas";
+            if (origen == 'l') {
+                destino = "../index.html#preview";
+            } else {
+                destino = "./pages/landingpage.html#preview";
+            }
             break;
         case "N3":
         case "galeria":
-            destino = "../index.html#galeria";
+            if (origen == 'l') {
+                destino = "../index.html#galeria";
+            } else {
+                destino = "./pages/landingpage.html#galeria";
+            }
             break;
         case "N4":
         case "podcast":
-            destino = "../index.html#podcast";
+            if (origen == 'l') {
+                destino = "../index.html#podcast";
+            } else {
+                destino = "./pages/landingpage.html#podcast";
+            }
             break;
         case "N5":
         case "perspectivas":
@@ -181,8 +208,8 @@ function armaURLDestino(hashtag) {
             }
             break;
         case "N6":
-        case "queEsPerspectivaErronea":
-            destino = "./queEsPerspectivaErronea.html";
+        case "quien":
+            destino = "./quien.html";
             break;
         case "N7":
         case "contacto-lp":
@@ -190,32 +217,54 @@ function armaURLDestino(hashtag) {
             break;
         default:
             if (hashtag == " ") {
-                destino = "../index.html";
+                if (origen == 'l') {
+                    destino = "../index.html";
+                } else {
+                    destino = "./pages/landingpage.html";
+                }
             }
             break;
     }
     if (destino != " ") {
-        alert(hashtag);
-        document.getElementById('clasico').setAttribute('href', destino);
+        if (origen == 'l') {
+            document.getElementById('clasico').setAttribute('href', destino);
+        } else {
+            document.getElementById('onepage').setAttribute('href', destino);
+        }
     }
 }
 
-//setHashtag
-//Esta función se ocupa de armar el link de destino para los posteos dentro de la sección "Perspectivas"
-function setHashtag(hashtag, origen) {
-    var articulo = document.getElementsByClassName("show");
-    var destino = "";
-    var pagina = "";
-    if (origen == "l") {
-        destino = "./perspectivas.html#" + hashtag;
-        pagina = "clasico";
-    } else {
-        destino = "./landingpage.html#" + hashtag;
-        pagina = "onepage";
+// posicionScroll
+// esta función toma todos los elementos que tengan la clase "ancla" y luego recorre la lista
+// para armar la url del cambio de estilo de la web y dirija al usuario a la página correspondiente. 
+function posicionScroll() {
+    var hashtag = "";
+    var lista = document.getElementsByClassName("ancla");
+    var encontrado = false;
+    // var exp = new RegExp('\\collapse');
+
+    for (let i = 0; i < lista.length; i++) {
+        if (!(encontrado)) {
+            if (enVista(lista[i])) {
+                //Este código evalua si el ancla del scroll es alguno de los posteos de la sección "Perspectivas"
+                //en cuyo caso le asigna el ID de la sección para que el armado de la URL resuelva solo a que posteo dirigir al usuario   
+                /*if (lista[i].search(exp) != -1) {                    
+                    lista[i] = 'N5';
+                }*/
+
+                if (page == "landingpage.html") {
+                    armaURLDestino(lista[i].id, 'l');
+                }
+                else {
+                    armaURLDestino(lista[i].id, 'c');
+                }
+                encontrado = true;
+            }
+        }
     }
-    document.getElementById(pagina).setAttribute('href', destino);
-    // alert(destino);
 }
+
+
 
 //
 // PROGRAMA PRINCIPAL
@@ -234,6 +283,6 @@ if (page == "perspectivas.html" || page == "landingpage.html") {
 window.addEventListener('DOMContentLoaded', cargaTema);
 
 //Evalua la posición del scroll para determinar en que sección se está parado.
-if (page == "landingpage.html") {
+if (page == "landingpage.html" || page == "index.html") {
     window.addEventListener('scroll', posicionScroll);
 }

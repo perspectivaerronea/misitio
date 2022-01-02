@@ -44,6 +44,17 @@ CLASES
     --social-twitter: url('../images/social/twitter_d.svg');
 }
 
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    vertical-align: middle;
+}
+
+.cl {
+    margin-bottom: 15px;    
+}
+
 .contenedorArriba {
     position: fixed;
     bottom: 40%;
@@ -189,14 +200,14 @@ CLASES
 
 /* Deslizador */
 .slider {
-    position: absolute;    
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: var(--color-fondo);
     -webkit-transition: 0.4s;
-    transition: 0.4s;    
+    transition: 0.4s;
 
     &:before {
         position: absolute;

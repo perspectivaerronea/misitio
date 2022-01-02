@@ -2,10 +2,6 @@
 ID
 */
 
-// #logoCorreo {
-//     vertical-align: middle;
-// }
-
 #podcast {
     margin-bottom: 10px;
     height: 100vh;
@@ -27,6 +23,14 @@ ID
     content: var(--arriba);
     @include max-wh-eq(80%);
 }
+
+/*Fix para el scroll con el menú flotante así no se pisa con el contenido*/
+#cl-offset :target::before {
+    content: "";
+    display: block;
+    height: 65px; /* fixed header height*/
+    margin: -65px 0 0; /* negative fixed header height */
+  }
 
 @each $id, $red in $listaRedes{
     #social-#{$red}{

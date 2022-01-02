@@ -13,7 +13,7 @@ body {
 main,
 section {
     width: 70%;
-    margin: 0 auto;
+    margin: 0 auto;    
 }
 
 article {
@@ -49,7 +49,7 @@ h2 {
 iframe {
     display: block;
     margin: 0 auto;
-    @include wh-dif(80%, 600px);
+    @include wh-dif(80%, 300px);
 }
 
 hr {

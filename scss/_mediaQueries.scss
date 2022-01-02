@@ -63,9 +63,9 @@
         }
     }
 
-    iframe {
-        @include wh-eq(inherit);
-    }
+     iframe {
+         @include  wh-dif(100%, 300px);
+     }
 
     .contenedorArriba {
         display: none;

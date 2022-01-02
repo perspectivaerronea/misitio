@@ -42,7 +42,7 @@ iframe {
   display: block;
   margin: 0 auto;
   width: 80%;
-  height: 600px; }
+  height: 300px; }
 
 hr {
   height: 6px;
@@ -87,6 +87,15 @@ CLASES
   --social-soundcloud: url('../images/social/soundcloud_d.svg');
   --social-instagram: url('../images/social/instagram_d.svg');
   --social-twitter: url('../images/social/twitter_d.svg'); }
+
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  vertical-align: middle; }
+
+.cl {
+  margin-bottom: 15px; }
 
 .contenedorArriba {
   position: fixed;
@@ -320,6 +329,15 @@ ID
   max-width: 80%;
   max-height: 80%; }
 
+/*Fix para el scroll con el menú flotante así no se pisa con el contenido*/
+#cl-offset :target::before {
+  content: "";
+  display: block;
+  height: 65px;
+  /* fixed header height*/
+  margin: -65px 0 0;
+  /* negative fixed header height */ }
+
 #social-correo {
   content: var(--social-correo);
   max-width: 40px;
@@ -407,12 +425,6 @@ ID
   vertical-align: middle; }
 
 /*Landing Page*/
-.menu-lp {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  vertical-align: middle; }
-
 .lp {
   margin-bottom: 15px; }
 
@@ -467,8 +479,8 @@ ID
   footer .row {
     margin: 0 auto; }
   iframe {
-    width: inherit;
-    height: inherit; }
+    width: 100%;
+    height: 300px; }
   .contenedorArriba {
     display: none; }
   #correoContacto .flex, #correoContacto .hashtagsMarquesina {
