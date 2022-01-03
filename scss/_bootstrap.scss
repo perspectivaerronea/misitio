@@ -18,8 +18,9 @@
         color: var(--color-nav-1);
     }
 
-    &-light &-nav .nav-link:focus:hover,
-    &-light &-brand:focus:hover {
+    &-light &-nav .nav-link:focus,
+    &-light &-brand:focus,&-light &-nav .nav-link:hover,
+    &-light &-brand:hover {
         color: lightcoral;
     }
 }
