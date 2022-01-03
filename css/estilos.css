@@ -381,7 +381,8 @@ ID
   color: var(--color-nav-1); }
 
 .navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-brand:focus, .navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-brand:hover {
   color: lightcoral; }
 

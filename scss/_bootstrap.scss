@@ -19,7 +19,8 @@
     }
 
     &-light &-nav .nav-link:focus,
-    &-light &-brand:focus,&-light &-nav .nav-link:hover,
+    &-light &-brand:focus,
+    &-light &-nav .nav-link:hover,
     &-light &-brand:hover {
         color: lightcoral;
     }
