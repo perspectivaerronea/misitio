@@ -4,7 +4,7 @@
         height: 100%;
     }
 
-    #perspectivas .accordion{
+    #perspectivas .accordion {
         margin-left: 0%;
         margin-right: 0%;
     }
@@ -32,12 +32,12 @@
     .accordion {
         margin: 0 auto;
 
-        #perspectivas &{
+        #perspectivas & {
             margin-left: 0%;
             margin-right: 0%;
         }
     }
-    
+
 }
 
 @media(max-width: 992px) {
@@ -63,9 +63,9 @@
         }
     }
 
-     iframe {
-         @include  wh-dif(100%, 300px);
-     }
+    iframe {
+        @include wh-dif(100%, 300px);
+    }
 
     .contenedorArriba {
         display: none;
@@ -109,10 +109,12 @@
         margin-top: 5px;
     }
 
+
 }
 
-@media(max-width: 500px) {
+@media(max-width: 650px) {
     #podcast iframe {
-        @include  wh-dif(100%, 150px);
+        @include wh-dif(100%, 150px);
     }
+    
 }
