@@ -110,3 +110,9 @@
     }
 
 }
+
+@media(max-width: 500px) {
+    #podcast iframe {
+        @include  wh-dif(100%, 150px);
+    }
+}

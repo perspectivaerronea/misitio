@@ -511,3 +511,8 @@ ID
     margin: 0 auto; }
   .btnColor {
     margin-top: 5px; } }
+
+@media (max-width: 500px) {
+  #podcast iframe {
+    width: 100%;
+    height: 150px; } }
