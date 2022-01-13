@@ -12,15 +12,20 @@ CLASES
     --color-nav-1: #{$color-nav-1};
     --color-toast: #{$color-toast};
     --color-fuente: #{$color-fuente-L};
-    // --classic: url('../images/misc/classic-d.png');
-    // --landing: url('../images/misc/landingpage-d.png');
+    --color-fuente-footer: #{$color-fuente-footer};
     --arriba: url('../images/misc/home.svg');
-    --social-correo: url('../images/social/mail.svg');
-    --social-youtube: url('../images/social/youtube.svg');
-    --social-spotify: url('../images/social/spotify.svg');
-    --social-soundcloud: url('../images/social/soundcloud.svg');
-    --social-instagram: url('../images/social/instagram.svg');
-    --social-twitter: url('../images/social/twitter.svg');
+    // --social-correo: url('../images/social/mail.svg');
+    // --social-youtube: url('../images/social/youtube.svg');
+    // --social-spotify: url('../images/social/spotify.svg');
+    // --social-soundcloud: url('../images/social/soundcloud.svg');
+    // --social-instagram: url('../images/social/instagram.svg');
+    // --social-twitter: url('../images/social/twitter.svg');    
+    --social-correo: url('../images/social/mail_d.svg');
+    --social-youtube: url('../images/social/youtube_d.svg');
+    --social-spotify: url('../images/social/spotify_d.svg');
+    --social-soundcloud: url('../images/social/soundcloud_d.svg');
+    --social-instagram: url('../images/social/instagram_d.svg');
+    --social-twitter: url('../images/social/twitter_d.svg');
 }
 
 .theme-dark {
@@ -33,8 +38,7 @@ CLASES
     --color-nav-1: #{$color-nav-1};
     --color-toast: #{$color-toast};
     --color-fuente: #{$color-fuente-D};
-    // --classic: url('../images/misc/classic-d.png');
-    // --landing: url('../images/misc/landingpage-d.png');
+    --color-fuente-footer: #{$color-fuente-footer};
     --arriba: url('../images/misc/home_d.svg');
     --social-correo: url('../images/social/mail_d.svg');
     --social-youtube: url('../images/social/youtube_d.svg');
@@ -52,7 +56,7 @@ CLASES
 }
 
 .cl {
-    margin-bottom: 15px;    
+    margin-bottom: 15px;
 }
 
 .contenedorArriba {
@@ -249,4 +253,13 @@ CLASES
             border-radius: 50%;
         }
     }
+}
+
+.espacioLateral {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.espacioVertical {
+    margin: 25vh auto 35vh auto;
 }

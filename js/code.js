@@ -73,7 +73,7 @@ function abrirAcordeon(elemento) {
 
 // cargaArticulo
 // toma el hashtag de la url, luego evalua si tiene valor o no y en base a eso determina que enviar a la función "abrirAcordeon"
-function cargaArticulo() {
+function cargaArticulo() {    
 
     var hashtag = 'collapse-last';
 
@@ -262,15 +262,16 @@ function posicionScroll() {
 var path = window.location.pathname;
 var page = path.split("/").pop();
 
+//Dispara la función para cargar el tema
+window.addEventListener('DOMContentLoaded', cargaTema);
+
 //Este código previene que se ejecute este código en las páginas donde no es necesario.
 if (page == "perspectivas.html" || page == "landingpage.html") {
     window.addEventListener('DOMContentLoaded', cargaArticulo);
 }
 
-//Dispara la función para cargar el tema
-window.addEventListener('DOMContentLoaded', cargaTema);
-
 //Evalua la posición del scroll para determinar en que sección se está parado.
 if (page == "landingpage.html" || page == "index.html") {
     window.addEventListener('scroll', posicionScroll);
 }
+

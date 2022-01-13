@@ -2,9 +2,9 @@
 ID
 */
 
-#podcast {
-    margin-bottom: 10px;
-    height: 100vh;
+#novedad,
+#principal {
+    margin: 10vh auto;
 }
 
 #redes {
@@ -26,7 +26,7 @@ ID
 
 /*Fix para el scroll con el menú flotante así no se pisa con el contenido*/
 #cl-offset :target::before {
-    @include OffsetCabecera(65px);
+    @include OffsetCabecera(72px);
 }
 
 @each $id,

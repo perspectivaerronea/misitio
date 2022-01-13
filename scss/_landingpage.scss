@@ -10,6 +10,5 @@
 
 /*Fix para el scroll con el menú flotante así no se pisa con el contenido*/
 #lp-offset :target::before {
-    @include OffsetCabecera(65px);
+    @include OffsetCabecera(72px);
 }
-

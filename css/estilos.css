@@ -16,21 +16,35 @@ section {
   width: 70%;
   margin: 0 auto; }
 
+header nav div {
+  width: 90%;
+  margin: 0 auto; }
+
 article {
   padding-left: 4px; }
 
-footer section {
-  width: 100%; }
-
-footer img {
-  width: 50px;
-  height: 50px; }
+footer {
+  color: var(--color-fuente-footer);
+  background-color: var(--color-principal); }
+  footer section {
+    width: 100%; }
+  footer img {
+    width: 50px;
+    height: 50px; }
+  footer a {
+    color: var(--color-fuente-footer); }
 
 a {
   text-decoration: none;
   color: var(--color-fuente);
   margin: 0;
   padding: 5px; }
+
+a[data-hs-anchor="true"] {
+  display: block;
+  position: relative;
+  visibility: hidden;
+  top: -72px; }
 
 h1 {
   font-weight: 700; }
@@ -63,13 +77,14 @@ CLASES
   --color-nav-1: #f8f9fa;
   --color-toast: #E0E0E0;
   --color-fuente: #105652;
+  --color-fuente-footer: #e0e0e0;
   --arriba: url('../images/misc/home.svg');
-  --social-correo: url('../images/social/mail.svg');
-  --social-youtube: url('../images/social/youtube.svg');
-  --social-spotify: url('../images/social/spotify.svg');
-  --social-soundcloud: url('../images/social/soundcloud.svg');
-  --social-instagram: url('../images/social/instagram.svg');
-  --social-twitter: url('../images/social/twitter.svg'); }
+  --social-correo: url('../images/social/mail_d.svg');
+  --social-youtube: url('../images/social/youtube_d.svg');
+  --social-spotify: url('../images/social/spotify_d.svg');
+  --social-soundcloud: url('../images/social/soundcloud_d.svg');
+  --social-instagram: url('../images/social/instagram_d.svg');
+  --social-twitter: url('../images/social/twitter_d.svg'); }
 
 .theme-dark {
   --color-fondo: #2C394B;
@@ -81,6 +96,7 @@ CLASES
   --color-nav-1: #f8f9fa;
   --color-toast: #E0E0E0;
   --color-fuente: #e0e0e0;
+  --color-fuente-footer: #e0e0e0;
   --arriba: url('../images/misc/home_d.svg');
   --social-correo: url('../images/social/mail_d.svg');
   --social-youtube: url('../images/social/youtube_d.svg');
@@ -252,6 +268,13 @@ CLASES
     .slider.round:before {
       border-radius: 50%; }
 
+.espacioLateral {
+  width: 95%;
+  margin: 0 auto; }
+
+.espacioVertical {
+  margin: 25vh auto 35vh auto; }
+
 /* 
 TRANSFORMACIONES & ANIMACIONES
 */
@@ -312,9 +335,9 @@ FLEX
 /*
 ID
 */
-#podcast {
-  margin-bottom: 10px;
-  height: 100vh; }
+#novedad,
+#principal {
+  margin: 10vh auto; }
 
 #redes {
   justify-self: flex-end; }
@@ -334,9 +357,9 @@ ID
 #cl-offset :target::before {
   content: "";
   display: block;
-  height: 65px;
+  height: 72px;
   /* fixed header height*/
-  margin: -65px 0 0;
+  margin: -72px 0 0;
   /* negative fixed header height */ }
 
 #social-correo {
@@ -443,9 +466,9 @@ ID
 #lp-offset :target::before {
   content: "";
   display: block;
-  height: 65px;
+  height: 72px;
   /* fixed header height*/
-  margin: -65px 0 0;
+  margin: -72px 0 0;
   /* negative fixed header height */ }
 
 /* MEDIA QUERIES */

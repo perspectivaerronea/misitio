@@ -22,7 +22,7 @@
 <body id="lp-offset">
     <header class="menu">
         <nav class="navbar navbar-expand-lg navbar-light navColor ">
-            <div class="container-fluid">
+            <div class="container-fluid espacioLateral">
                 <h1><a class="navbar-brand navItemColor" href="#">PERSPECTIVA ERRÓNEA</a></h1> <button
                     class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -72,7 +72,7 @@
                     allowfullscreen></iframe> </div>
         </article>
     </main>
-    <section id="preview">
+    <section id="preview"  class="espacioVertical">
         <article>
             <hr>
             <h2 id="N2" class="ancla">Preview Perspectivas</h2>
@@ -151,7 +151,7 @@
             </div>
         </article>
     </section>
-    <section id="galeria">
+    <section id="galeria"  class="espacioVertical">
         <article>
             <hr>
             <h2 id="N3" class="ancla">Galería NFT</h2>
@@ -253,7 +253,8 @@
             </div>
         </article>
     </section>
-    <section id="podcast">
+    <section id="podcast" class="espacioVertical">
+        <article>
         <hr>
         <h2 id="N4" class="ancla">Podcast</h2>
         <p>¿Te gustan los datos inútiles? ¿te interesa escuchar a alguien que aún tras investigar sobre un tema supone
@@ -264,18 +265,19 @@
             src="https://open.spotify.com/embed/playlist/38eHjsPhKW5w7OKEJMdubm?utm_source=generator&amp;theme=0"
             frameBorder="0" allowfullscreen="" loading="lazy"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    </section> <!-- Perspectivas Inicio -->
-    <section id="perspectivas" class="lp">
+        </article>
+    </section>     
+    <section id="perspectivas" class="lp espacioVertical">
         <hr>
         <h2 id="N5" class="ancla">Perspectivas</h2>
         <div class="accordion" id="accordionPosteos">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="heading-last"></h2> <button id="head-bt-last" class="accordion-button"
-                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse-last" aria-expanded="true"
+                <h2 class="accordion-header" id="heading-last"></h2> <button id="head-bt-last" class="accordion-button collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse-last" aria-expanded="false"
                     aria-controls="collapse-last" onclick="setHashtag('collapse-last', 'l')">
                     <div class="tituloPosteo"> 07/12/2021 - Resumen Anual 2021 </div>
                 </button> </h2>
-                <div id="collapse-last" class="accordion-collapse collapse show ancla" aria-labelledby="heading-last"
+                <div id="collapse-last" class="accordion-collapse collapse ancla" aria-labelledby="heading-last"
                     data-bs-parent="#accordionPosteos">
                     <div class="accordion-body">
                         <article id="ultimo">
@@ -555,9 +557,8 @@
                 </div>
             </div>
         </div>
-    </section> <!-- Perspectivas Fin -->
-    <!-- Quien Inicio -->
-    <section id="quien" class="lp">
+    </section> 
+    <section id="quien" class="lp espacioVertical">
         <article>
             <hr>
             <h2 id="N6" class="ancla">¿Qué es Perspectiva Errónea?</h2>
@@ -621,9 +622,8 @@
                     rel="noreferrer"><button type="button" class="btn btnColor btn-sm">Prestame una oreja</button></a>
             </div>
         </div>
-    </div> <!-- Quien Fin -->
-    <!-- Contacto Inicio -->
-    <section id="contacto-lp" class="lp">
+    </div> 
+    <section id="contacto-lp" class="lp espacioVertical">
         <hr>
         <h2 id="N7" class="ancla"> ¡Mandanos tu mensaje! </h2>
         <form class="col-xl-10 m-auto formularioContacto">
@@ -645,7 +645,7 @@
                     class="form-check-label" for="norobot">No soy un robot</label> </div> <button type="submit"
                 class="btn btnColor me-auto">Enviar Mensaje</button>
         </form>
-    </section> <!-- Contacto Fin -->
+    </section> 
     <section id="newsletter" class="bordeRecuadroEspecial">
         <article>
             <p>Anotate para recibir el newsletter con todas las novedades y borrar el FOMO de la ecuación.</p>
@@ -656,7 +656,7 @@
     </section>
     <div class="contenedorArriba"> <a href="#top"><img loading="lazy" id="arriba" alt="Volver al principio de la página"></a> </div>
     <footer class="footer mt-auto">
-        <div class="container-fluid">
+        <div class="container-fluid espacioLateral">
             <hr>
             <div class="row">
                 <div class="col-md-6 col-lg-7 col-xl-8">
