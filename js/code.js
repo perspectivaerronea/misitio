@@ -73,7 +73,7 @@ function abrirAcordeon(elemento) {
 
 // cargaArticulo
 // toma el hashtag de la url, luego evalua si tiene valor o no y en base a eso determina que enviar a la función "abrirAcordeon"
-function cargaArticulo() {    
+function cargaArticulo() {
 
     var hashtag = 'collapse-last';
 
@@ -90,6 +90,8 @@ function cargaArticulo() {
     } else {
         setHashtag(hashtag, 'l');
     }
+    // alert(hashtag);
+    document.getElementById('onepage').setAttribute('href', destino);
 
 }
 
