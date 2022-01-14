@@ -273,7 +273,7 @@ CLASES
   margin: 0 auto; }
 
 .espacioVertical {
-  margin: 25vh auto 35vh auto; }
+  margin: 30vh auto 35vh auto; }
 
 /* 
 TRANSFORMACIONES & ANIMACIONES
@@ -411,8 +411,8 @@ ID
 
 .carousel-inner {
   margin: 0 auto;
-  max-width: 65%;
-  max-height: 65%; }
+  max-width: 58%;
+  max-height: 58%; }
 
 .carousel-caption {
   border-radius: 20px;

@@ -31,7 +31,7 @@
 .carousel {
     &-inner {
         margin: 0 auto;
-        @include max-wh-eq(65%);
+        @include max-wh-eq(58%);
     }
 
     &-caption {

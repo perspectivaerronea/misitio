@@ -90,8 +90,6 @@ function cargaArticulo() {
     } else {
         setHashtag(hashtag, 'l');
     }
-    // alert(hashtag);
-    document.getElementById('onepage').setAttribute('href', destino);
 
 }
 
